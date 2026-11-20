@@ -1,0 +1,26 @@
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-s);
+    min-height: var(--control-height-m);
+    font-size: var(--font-size-m);
+    cursor: pointer;
+}
+
+.box {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+}
+
+.hiddenLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}

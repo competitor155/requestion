@@ -1,0 +1,54 @@
+.modal {
+    max-height: calc(100vh - 2 * var(--space-xl));
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+    box-shadow: var(--shadow-raised);
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &::backdrop {
+        background: var(--color-backdrop);
+    }
+}
+
+.medium {
+    width: min(520px, calc(100vw - 2 * var(--space-l)));
+}
+
+.large {
+    width: min(760px, calc(100vw - 2 * var(--space-l)));
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding: var(--space-xl) var(--space-xl) var(--space-l);
+}
+
+.title {
+    font-size: var(--font-size-xl);
+}
+
+.body {
+    flex: 1;
+    min-height: 0;
+    padding: 0 var(--space-xl) var(--space-xl);
+    overflow: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-m);
+    padding: var(--space-l) var(--space-xl);
+    border-top: 1px solid var(--color-border);
+}

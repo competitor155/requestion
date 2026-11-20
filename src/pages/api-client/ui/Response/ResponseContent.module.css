@@ -1,0 +1,7 @@
+.failure {
+    color: var(--color-danger-text);
+}
+
+.failureIcon {
+    font-size: var(--font-size-l);
+}

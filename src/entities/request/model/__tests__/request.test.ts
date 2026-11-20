@@ -1,0 +1,35 @@
+import { describe, expect, it } from '@rstest/core';
+
+import { HttpMethods, validate } from '#shared/lib';
+
+import { apiRequestValidator, RequestBodyTypes } from '../request.ts';
+
+import { makeRequest } from './mocks.ts';
+
+describe('apiRequestValidator', () => {
+    it('accepts templates with variables', () => {
+        expect(validate(apiRequestValidator, makeRequest()).ok).toBe(true);
+    });
+
+    it.each([HttpMethods.GET, HttpMethods.HEAD])('rejects a body on %s', method => {
+        expect(validate(apiRequestValidator, makeRequest({ method })).ok).toBe(false);
+    });
+
+    it('accepts GET without a body', () => {
+        const request = makeRequest({ method: HttpMethods.GET, body: { bodyType: RequestBodyTypes.NONE } });
+
+        expect(validate(apiRequestValidator, request).ok).toBe(true);
+    });
+
+    it('rejects CONNECT, which fetch() refuses to send', () => {
+        const request = makeRequest({ method: HttpMethods.CONNECT, body: { bodyType: RequestBodyTypes.NONE } });
+
+        expect(validate(apiRequestValidator, request).ok).toBe(false);
+    });
+
+    it('requires an explicit cookie decision', () => {
+        const { sendCookies: _, ...withoutCookies } = makeRequest();
+
+        expect(validate(apiRequestValidator, withoutCookies).ok).toBe(false);
+    });
+});

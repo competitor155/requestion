@@ -1,0 +1,1502 @@
+{
+    "extName": {
+        "message": "Requestion"
+    },
+    "extDescription": {
+        "message": "Редирект, блокировка и мокирование HTTP-запросов, модификация заголовков и API-клиент. Без серверов, аккаунтов и телеметрии."
+    },
+    "popupTagline": {
+        "message": "Редирект, блокировка и модификация HTTP-запросов. Данные хранятся только в браузере."
+    },
+    "popupOpenDashboard": {
+        "message": "Открыть панель управления"
+    },
+    "popupOpenApiClient": {
+        "message": "Открыть API-клиент"
+    },
+    "navLabel": {
+        "message": "Разделы панели управления"
+    },
+    "rulesTitle": {
+        "message": "Правила"
+    },
+    "sitesTitle": {
+        "message": "Разрешённые сайты"
+    },
+    "settingsTitle": {
+        "message": "Настройки"
+    },
+    "mocksTitle": {
+        "message": "Моки API"
+    },
+    "policyTitle": {
+        "message": "Политика организации"
+    },
+    "policyDescription": {
+        "message": "Настройки, заданные администратором организации через корпоративную политику браузера (managed storage). Они имеют приоритет над пользовательскими и не редактируются в расширении."
+    },
+    "policyEmptyTitle": {
+        "message": "Политика не задана"
+    },
+    "policyEmptyText": {
+        "message": "Ограничения организации отсутствуют. Все функции доступны, настройки задаёт пользователь."
+    },
+    "policyValuesTitle": {
+        "message": "Параметры политики"
+    },
+    "policyIssues": {
+        "message": "Политика содержит ошибки. Некорректные ограничения применяются в самом строгом варианте, остальные некорректные значения игнорируются."
+    },
+    "policyDisabledFeatures": {
+        "message": "Отключённые функции"
+    },
+    "policyAllowedHosts": {
+        "message": "Разрешённые сайты"
+    },
+    "policyAllowUserRules": {
+        "message": "Пользовательские правила и моки"
+    },
+    "policyRequireVault": {
+        "message": "Шифрование секретов"
+    },
+    "policyPresetBundle": {
+        "message": "Правила и моки организации"
+    },
+    "policyNotSet": {
+        "message": "Не задано"
+    },
+    "policyNoFeaturesOff": {
+        "message": "Нет"
+    },
+    "policyNoHosts": {
+        "message": "Нет (доступ ко всем сайтам запрещён)"
+    },
+    "policyUserRulesAllowed": {
+        "message": "Разрешены"
+    },
+    "policyUserRulesForbidden": {
+        "message": "Запрещены (применяются только правила и моки организации)"
+    },
+    "policyVaultRequired": {
+        "message": "Обязательно"
+    },
+    "policyVaultOptional": {
+        "message": "Необязательно"
+    },
+    "policyPresetCounts": {
+        "message": "Правила: $1, моки: $2"
+    },
+    "policyPresetBroken": {
+        "message": "Не применяются (набор содержит ошибки)"
+    },
+    "policyFeatureRedirect": {
+        "message": "Редирект"
+    },
+    "policyFeatureHeaders": {
+        "message": "Модификация заголовков"
+    },
+    "policyFeatureBlock": {
+        "message": "Блокировка"
+    },
+    "policyFeatureMocks": {
+        "message": "Моки API"
+    },
+    "policyFeatureApiClient": {
+        "message": "API-клиент"
+    },
+    "policyOpen": {
+        "message": "Открыть политику"
+    },
+    "policyBlockedBadge": {
+        "message": "Отключено политикой"
+    },
+    "policySourceBadge": {
+        "message": "Задано политикой"
+    },
+    "transferTitle": {
+        "message": "Импорт и экспорт"
+    },
+    "transferDescription": {
+        "message": "Переносите правила, моки и окружения между браузерами и пользователями в виде JSON-файла (удобно хранить в git)."
+    },
+    "transferExportTitle": {
+        "message": "Экспорт"
+    },
+    "transferExportParts": {
+        "message": "Содержимое файла"
+    },
+    "transferPartRules": {
+        "message": "Правила"
+    },
+    "transferPartMocks": {
+        "message": "Моки"
+    },
+    "transferPartEnvironments": {
+        "message": "Окружения"
+    },
+    "transferPartCollections": {
+        "message": "Коллекции"
+    },
+    "transferExportHint": {
+        "message": "Записи из политики организации и значения секретов не экспортируются (секретные переменные экспортируются только с именами)."
+    },
+    "transferExportSubmit": {
+        "message": "Скачать JSON"
+    },
+    "transferImportTitle": {
+        "message": "Импорт"
+    },
+    "transferImportHint": {
+        "message": "Записи с совпадающим id заменяют существующие, удаления не происходит. Значения секретов в этом браузере и записи из политики не изменяются."
+    },
+    "transferImportFile": {
+        "message": "Файл"
+    },
+    "transferImportFileHint": {
+        "message": "JSON, до 5 МБ"
+    },
+    "transferImportText": {
+        "message": "Вставить текстовое содержимое файла"
+    },
+    "transferFileUnreadable": {
+        "message": "Не удалось прочитать файл."
+    },
+    "transferImportInvalid": {
+        "message": "Файл не может быть импортирован:"
+    },
+    "transferPreview": {
+        "message": "Предпросмотр импорта"
+    },
+    "transferCounts": {
+        "message": "$1 — новых: $2, заменяемых: $3, пропущенных (записи политики): $4"
+    },
+    "transferImportSubmit": {
+        "message": "Импортировать"
+    },
+    "transferImportDone": {
+        "message": "Импорт завершён."
+    },
+    "transferImportFailed": {
+        "message": "Ошибка импорта: $1"
+    },
+    "interceptionLabel": {
+        "message": "Перехват запросов"
+    },
+    "interceptionOn": {
+        "message": "Включённые правила и моки применяются на разрешённых сайтах."
+    },
+    "interceptionOff": {
+        "message": "Перехват приостановлен (правила и моки не применяются)."
+    },
+    "interceptionPaused": {
+        "message": "Перехват приостановлен, правила не применяются."
+    },
+    "interceptionTurnOn": {
+        "message": "Включить"
+    },
+    "interceptionSaveFailed": {
+        "message": "Не удалось переключить перехват. Попробуйте ещё раз."
+    },
+    "rulesDescription": {
+        "message": "Настраивайте редирект и блокировку запросов, изменяйте их заголовки. Если запросу соответствуют несколько правил, применяется правило выше в списке."
+    },
+    "rulesAdd": {
+        "message": "Новое правило"
+    },
+    "rulesNoSites": {
+        "message": "Чтобы правила применялись, добавьте разрешённые сайты. Сейчас список разрешённых сайтов пуст."
+    },
+    "rulesOpenSites": {
+        "message": "Добавить сайт"
+    },
+    "rulesPolicyOnly": {
+        "message": "Политика организации разрешает только правила организации. Пользовательские правила не применяются."
+    },
+    "rulesFeaturesOff": {
+        "message": "Отключено политикой организации: $1. Правила этих типов не применяются."
+    },
+    "rulesEmptyTitle": {
+        "message": "Правил пока нет"
+    },
+    "rulesEmptyText": {
+        "message": "Редирект и блокировка запросов, модификация заголовков по шаблону URL."
+    },
+    "rulesEdit": {
+        "message": "Изменить"
+    },
+    "rulesDelete": {
+        "message": "Удалить"
+    },
+    "rulesActionFailed": {
+        "message": "Не удалось обновить правило. Попробуйте ещё раз."
+    },
+    "ruleNoAccess": {
+        "message": "У Requestion нет разрешения на доступ к $1 (host permission), поэтому правило там не применяется."
+    },
+    "ruleHostNotAllowed": {
+        "message": "Политика организации запрещает доступ к $1, поэтому правило там не применяется."
+    },
+    "ruleAllowAccess": {
+        "message": "Разрешить доступ"
+    },
+    "ruleBadgeRedirect": {
+        "message": "Редирект"
+    },
+    "ruleBadgeHeaders": {
+        "message": "Заголовки"
+    },
+    "ruleBadgeBlock": {
+        "message": "Блокировка"
+    },
+    "ruleSummaryRedirect": {
+        "message": "На $1"
+    },
+    "ruleSummaryTransform": {
+        "message": "Модификация URL: $1"
+    },
+    "ruleSummaryHeaders": {
+        "message": "Модификация заголовков: $1"
+    },
+    "rulesNewTitle": {
+        "message": "Новое правило"
+    },
+    "rulesEditTitle": {
+        "message": "Редактирование правила"
+    },
+    "rulesCancel": {
+        "message": "Отмена"
+    },
+    "rulesSave": {
+        "message": "Сохранить"
+    },
+    "rulesSaveFailed": {
+        "message": "Не удалось сохранить правило: $1"
+    },
+    "rulesDeleteTitle": {
+        "message": "Удалить правило?"
+    },
+    "rulesDeleteText": {
+        "message": "Правило «$1» будет удалено без возможности восстановления."
+    },
+    "ruleName": {
+        "message": "Название"
+    },
+    "ruleNamePlaceholder": {
+        "message": "Например, тестовый API"
+    },
+    "ruleStepMatch": {
+        "message": "Условия совпадения"
+    },
+    "ruleStepAction": {
+        "message": "Действие"
+    },
+    "ruleType": {
+        "message": "Тип действия"
+    },
+    "ruleTypeRedirect": {
+        "message": "Редирект"
+    },
+    "ruleTypeHeaders": {
+        "message": "Модификация заголовков"
+    },
+    "ruleTypeBlock": {
+        "message": "Блокировка"
+    },
+    "ruleTypeRedirectHint": {
+        "message": "Выполняет редирект соответствующих запросов на другой URL."
+    },
+    "ruleTypeHeadersHint": {
+        "message": "Устанавливает, дополняет или удаляет заголовки соответствующих запросов и их ответов."
+    },
+    "ruleTypeBlockHint": {
+        "message": "Соответствующие запросы отменяются до отправки в сеть (net::ERR_BLOCKED_BY_CLIENT)."
+    },
+    "ruleSyntax": {
+        "message": "Синтаксис шаблона"
+    },
+    "ruleSyntaxFilter": {
+        "message": "Фильтр URL"
+    },
+    "ruleSyntaxRegex": {
+        "message": "Регулярное выражение"
+    },
+    "rulePattern": {
+        "message": "Шаблон URL"
+    },
+    "rulePatternFilterHint": {
+        "message": "|| — начало домена, * — любые символы, ^ — разделитель (например, / или ?)."
+    },
+    "rulePatternRegexHint": {
+        "message": "Синтаксис RE2 (используется в Chrome). Группы захвата можно подставить в URL редиректа."
+    },
+    "rulePatternFilterPlaceholder": {
+        "message": "||api.example.com/v1/"
+    },
+    "rulePatternRegexPlaceholder": {
+        "message": "^https://api\\.example\\.com/(.*)"
+    },
+    "patternExamplesLabel": {
+        "message": "Примеры шаблонов"
+    },
+    "patternFilterTitle": {
+        "message": "Синтаксис фильтра URL"
+    },
+    "patternFilterDomain": {
+        "message": "начало домена (включая поддомены)"
+    },
+    "patternFilterEdge": {
+        "message": "якорь (начало или конец URL)"
+    },
+    "patternFilterAny": {
+        "message": "любая последовательность символов (wildcard)"
+    },
+    "patternFilterSeparator": {
+        "message": "разделитель (любой символ, кроме букв, цифр и _ - . %) или конец URL"
+    },
+    "patternExamplesTitle": {
+        "message": "Примеры"
+    },
+    "patternFilterExampleSite": {
+        "message": "любые запросы к example.com и его поддоменам"
+    },
+    "patternFilterExamplePrefix": {
+        "message": "URL, начинающиеся с api.example.com/v1/"
+    },
+    "patternFilterExampleExact": {
+        "message": "точное совпадение (только этот URL)"
+    },
+    "patternFilterExampleScripts": {
+        "message": "URL на cdn.example.com, содержащие .js"
+    },
+    "patternFilterExampleContains": {
+        "message": "любой URL, содержащий подстроку /graphql"
+    },
+    "patternRegexTitle": {
+        "message": "Регулярные выражения (синтаксис RE2)"
+    },
+    "patternRegexExampleGroup": {
+        "message": "часть URL после /v1/ захватывается в группу \\1 (для подстановки при редиректе)"
+    },
+    "patternRegexExampleWww": {
+        "message": "схемы http и https, с поддоменом www и без него"
+    },
+    "patternRegexExampleImages": {
+        "message": "изображения с расширениями .png, .jpg и .jpeg"
+    },
+    "patternRegexExampleId": {
+        "message": "URL, оканчивающиеся на /users/ и числовой идентификатор"
+    },
+    "patternRegexNote": {
+        "message": "Выражение сопоставляется с полным URL (включая схему). Точку нужно экранировать (\\.). RE2 не поддерживает опережающие и ретроспективные проверки (lookaround) и обратные ссылки (backreferences)."
+    },
+    "ruleConditions": {
+        "message": "Дополнительные условия"
+    },
+    "ruleMethods": {
+        "message": "HTTP-методы"
+    },
+    "ruleMethodsHint": {
+        "message": "Если ничего не выбрано, учитываются все методы."
+    },
+    "ruleResourceTypes": {
+        "message": "Типы ресурсов"
+    },
+    "ruleResourceTypesHint": {
+        "message": "Если ничего не выбрано, учитываются все типы, включая документы верхнего уровня (main_frame)."
+    },
+    "resourceTypeMainFrame": {
+        "message": "Страницы (main_frame)"
+    },
+    "resourceTypeSubFrame": {
+        "message": "Фреймы (sub_frame)"
+    },
+    "resourceTypeStylesheet": {
+        "message": "Стили"
+    },
+    "resourceTypeScript": {
+        "message": "Скрипты"
+    },
+    "resourceTypeImage": {
+        "message": "Изображения"
+    },
+    "resourceTypeFont": {
+        "message": "Шрифты"
+    },
+    "resourceTypeObject": {
+        "message": "Объекты (object, embed)"
+    },
+    "resourceTypeXhr": {
+        "message": "Fetch и XHR"
+    },
+    "resourceTypePing": {
+        "message": "Ping и Beacon"
+    },
+    "resourceTypeCspReport": {
+        "message": "Отчёты CSP"
+    },
+    "resourceTypeMedia": {
+        "message": "Медиа (аудио, видео)"
+    },
+    "resourceTypeWebsocket": {
+        "message": "WebSocket"
+    },
+    "resourceTypeWebtransport": {
+        "message": "WebTransport"
+    },
+    "resourceTypeWebbundle": {
+        "message": "Web Bundles"
+    },
+    "resourceTypeOther": {
+        "message": "Прочее"
+    },
+    "ruleInitiatorDomains": {
+        "message": "Домены-инициаторы"
+    },
+    "ruleInitiatorDomainsHint": {
+        "message": "Домены страниц, отправляющих запрос, через запятую (включая поддомены)."
+    },
+    "ruleInitiatorDomainsPlaceholder": {
+        "message": "app.example.com, admin.example.com"
+    },
+    "ruleTarget": {
+        "message": "Цель редиректа"
+    },
+    "ruleTargetUrl": {
+        "message": "На фиксированный URL"
+    },
+    "ruleTargetSubstitution": {
+        "message": "По регулярному выражению"
+    },
+    "ruleTargetTransform": {
+        "message": "На изменённый URL"
+    },
+    "redirectExamplesLabel": {
+        "message": "Примеры редиректов"
+    },
+    "redirectExamplesTitle": {
+        "message": "Варианты цели редиректа"
+    },
+    "redirectExampleUrl": {
+        "message": "Для всех соответствующих запросов выполняется редирект на указанный URL. Путь и строка запроса (query) исходного URL не сохраняются."
+    },
+    "redirectExampleSubstitution": {
+        "message": "Шаблон захватывает остаток URL в группу \\1, подстановка вставляет его в новый URL (/users?page=2 сохраняется как /users?page=2)."
+    },
+    "redirectExampleTransform": {
+        "message": "Изменяются только заполненные части URL (в примере — хост). Путь и строка запроса (query) сохраняются."
+    },
+    "ruleTargetUrlLabel": {
+        "message": "Целевой URL"
+    },
+    "ruleTargetUrlPlaceholder": {
+        "message": "https://staging.example.com/"
+    },
+    "ruleSubstitution": {
+        "message": "Шаблон подстановки"
+    },
+    "ruleSubstitutionHint": {
+        "message": "\\1–\\9 — группы захвата регулярного выражения."
+    },
+    "ruleSubstitutionPlaceholder": {
+        "message": "https://new.example.com/\\1"
+    },
+    "ruleSubstitutionNeedsRegex": {
+        "message": "Подстановка требует групп захвата регулярного выражения. Выберите синтаксис шаблона «Регулярное выражение»."
+    },
+    "ruleScheme": {
+        "message": "Схема"
+    },
+    "ruleSchemeKeep": {
+        "message": "Без изменений"
+    },
+    "ruleSchemeHttp": {
+        "message": "http"
+    },
+    "ruleSchemeHttps": {
+        "message": "https"
+    },
+    "ruleHost": {
+        "message": "Хост"
+    },
+    "rulePort": {
+        "message": "Порт"
+    },
+    "rulePath": {
+        "message": "Путь"
+    },
+    "ruleTransformHint": {
+        "message": "Если поле не заполнено, соответствующая часть исходного URL сохраняется."
+    },
+    "ruleRequestHeaders": {
+        "message": "Заголовки запроса"
+    },
+    "ruleResponseHeaders": {
+        "message": "Заголовки ответа"
+    },
+    "ruleHeadersEmpty": {
+        "message": "Модификации заголовков не заданы."
+    },
+    "ruleHeaderName": {
+        "message": "Заголовок"
+    },
+    "ruleHeaderOperation": {
+        "message": "Операция"
+    },
+    "ruleHeaderValue": {
+        "message": "Значение"
+    },
+    "ruleHeaderSet": {
+        "message": "Установить"
+    },
+    "ruleHeaderRemove": {
+        "message": "Удалить"
+    },
+    "ruleHeaderAppend": {
+        "message": "Дополнить"
+    },
+    "ruleHeaderAdd": {
+        "message": "Добавить заголовок"
+    },
+    "ruleHeaderDelete": {
+        "message": "Удалить строку"
+    },
+    "sitesDescription": {
+        "message": "Requestion действует только на разрешённых сайтах. Браузер проверяет доступ как к хосту запроса, так и к странице-инициатору. Моки применяются только на сайтах, где они включены."
+    },
+    "sitesDomain": {
+        "message": "Домен"
+    },
+    "sitesDomainPlaceholder": {
+        "message": "example.com"
+    },
+    "sitesSubdomains": {
+        "message": "Включая поддомены"
+    },
+    "sitesAllow": {
+        "message": "Разрешить доступ"
+    },
+    "sitesEmptyTitle": {
+        "message": "Сайтов пока нет"
+    },
+    "sitesEmptyText": {
+        "message": "Добавьте домен в поле выше. Браузер запросит подтверждение доступа."
+    },
+    "sitesAllSites": {
+        "message": "Все сайты"
+    },
+    "sitesWithSubdomains": {
+        "message": "включая поддомены"
+    },
+    "sitesRemove": {
+        "message": "Отозвать доступ"
+    },
+    "sitesInvalidDomain": {
+        "message": "Введите корректный домен (например, example.com или localhost)."
+    },
+    "sitesNotGranted": {
+        "message": "Доступ не предоставлен."
+    },
+    "sitesNotAllowed": {
+        "message": "Политика организации запрещает доступ к этому сайту."
+    },
+    "sitesSubdomainsNotAllowed": {
+        "message": "Политика организации разрешает этот сайт без поддоменов. Снимите флажок «Включая поддомены»."
+    },
+    "sitesAllowedHosts": {
+        "message": "Политика организации разрешает доступ только к сайтам: $1."
+    },
+    "sitesNoHostsAllowed": {
+        "message": "Политика организации запрещает доступ ко всем сайтам."
+    },
+    "sitesRequestFailed": {
+        "message": "Не удалось запросить доступ. Попробуйте ещё раз."
+    },
+    "sitesRemoveFailed": {
+        "message": "Не удалось отозвать доступ. Попробуйте ещё раз."
+    },
+    "sitesMocks": {
+        "message": "Моки"
+    },
+    "sitesMocksFor": {
+        "message": "Моки для $1"
+    },
+    "sitesMocksFailed": {
+        "message": "Не удалось переключить моки для сайта. Попробуйте ещё раз."
+    },
+    "mocksDescription": {
+        "message": "Подменяйте ответы на запросы fetch и XHR. Если запросу соответствуют несколько моков, применяется тот, который находится выше в списке. К открытым страницам изменения применяются после перезагрузки."
+    },
+    "mocksAdd": {
+        "message": "Новый мок"
+    },
+    "mocksPaused": {
+        "message": "Перехват приостановлен, моки не применяются."
+    },
+    "mocksNoSites": {
+        "message": "Чтобы моки применялись, включите их для сайта. Сейчас моки не включены ни для одного сайта."
+    },
+    "mocksOpenSites": {
+        "message": "Включить для сайта"
+    },
+    "mocksPolicyOnly": {
+        "message": "Политика организации разрешает только моки организации. Пользовательские моки не применяются."
+    },
+    "mocksFeatureOff": {
+        "message": "Моки API отключены политикой организации. Моки не применяются."
+    },
+    "mocksSecretsWarning": {
+        "message": "Моки доступны скриптам страницы. Не храните в них токены, пароли и другие секреты."
+    },
+    "mocksEmptyTitle": {
+        "message": "Моков пока нет"
+    },
+    "mocksEmptyText": {
+        "message": "Подмена ответов (статус, заголовки, тело) по шаблону URL."
+    },
+    "mocksEdit": {
+        "message": "Изменить"
+    },
+    "mocksDelete": {
+        "message": "Удалить"
+    },
+    "mocksActionFailed": {
+        "message": "Не удалось обновить мок. Попробуйте ещё раз."
+    },
+    "mocksNewTitle": {
+        "message": "Новый мок"
+    },
+    "mocksEditTitle": {
+        "message": "Редактирование мока"
+    },
+    "mocksCancel": {
+        "message": "Отмена"
+    },
+    "mocksSave": {
+        "message": "Сохранить"
+    },
+    "mocksSaveFailed": {
+        "message": "Не удалось сохранить мок: $1"
+    },
+    "mocksDeleteTitle": {
+        "message": "Удалить мок?"
+    },
+    "mocksDeleteText": {
+        "message": "Мок «$1» будет удалён без возможности восстановления."
+    },
+    "mockSummaryMethods": {
+        "message": "Методы: $1"
+    },
+    "mockSummaryDelay": {
+        "message": "Задержка: $1 мс"
+    },
+    "mockName": {
+        "message": "Название"
+    },
+    "mockNamePlaceholder": {
+        "message": "Например, пустой список пользователей"
+    },
+    "mockStepMatch": {
+        "message": "Условия совпадения"
+    },
+    "mockStepResponse": {
+        "message": "Ответ"
+    },
+    "mockStatus": {
+        "message": "Код статуса"
+    },
+    "mockDelay": {
+        "message": "Задержка (мс)"
+    },
+    "mockDelayHint": {
+        "message": "Не более 60 000 мс. Если поле не заполнено, ответ возвращается без задержки."
+    },
+    "mockBodyType": {
+        "message": "Формат тела"
+    },
+    "mockBodyJson": {
+        "message": "JSON"
+    },
+    "mockBodyText": {
+        "message": "Текст"
+    },
+    "mockBody": {
+        "message": "Тело ответа"
+    },
+    "mockBodyHint": {
+        "message": "Тело в формате JSON должно быть валидным JSON. Ответы со статусами без тела (null body status, например 204) не содержат тела."
+    },
+    "mockHeaders": {
+        "message": "Заголовки ответа"
+    },
+    "mockHeaderEnabled": {
+        "message": "Отправлять заголовок"
+    },
+    "mockHeaderName": {
+        "message": "Заголовок"
+    },
+    "mockHeaderValue": {
+        "message": "Значение"
+    },
+    "mockHeaderAdd": {
+        "message": "Добавить заголовок"
+    },
+    "mockHeaderDelete": {
+        "message": "Удалить заголовок"
+    },
+    "mockHeadersEmpty": {
+        "message": "Если заголовки не заданы, ответ содержит только Content-Type, соответствующий формату тела."
+    },
+    "settingsDescription": {
+        "message": "Параметры интерфейса Requestion в этом браузере."
+    },
+    "settingsLanguage": {
+        "message": "Язык интерфейса"
+    },
+    "languageAuto": {
+        "message": "Язык браузера"
+    },
+    "languageEnglish": {
+        "message": "English"
+    },
+    "languageRussian": {
+        "message": "Русский"
+    },
+    "settingsTheme": {
+        "message": "Тема"
+    },
+    "themeDark": {
+        "message": "Тёмная"
+    },
+    "themeLight": {
+        "message": "Светлая"
+    },
+    "themeSystem": {
+        "message": "Системная"
+    },
+    "settingsPrivacy": {
+        "message": "Правила и настройки хранятся локально в этом браузере. Requestion не использует серверы, аккаунты и телеметрию."
+    },
+    "settingsSaveFailed": {
+        "message": "Не удалось сохранить настройку. Попробуйте ещё раз."
+    },
+    "apiClientTitle": {
+        "message": "API-клиент"
+    },
+    "apiClientDisabledTitle": {
+        "message": "API-клиент отключён политикой организации"
+    },
+    "apiClientDisabledText": {
+        "message": "Администратор организации отключил API-клиент через корпоративную политику браузера. История запросов сохранена."
+    },
+    "apiClientTabs": {
+        "message": "Открытые запросы"
+    },
+    "apiClientNewTab": {
+        "message": "Новый запрос"
+    },
+    "apiClientTabOpen": {
+        "message": "Открыть новый запрос"
+    },
+    "apiClientTabClose": {
+        "message": "Закрыть $1"
+    },
+    "apiClientMethod": {
+        "message": "Метод"
+    },
+    "apiClientUrl": {
+        "message": "URL"
+    },
+    "apiClientSend": {
+        "message": "Отправить"
+    },
+    "apiClientCancel": {
+        "message": "Отменить"
+    },
+    "apiClientSections": {
+        "message": "Разделы запроса"
+    },
+    "apiClientSectionParams": {
+        "message": "Параметры"
+    },
+    "apiClientSectionHeaders": {
+        "message": "Заголовки"
+    },
+    "apiClientSectionBody": {
+        "message": "Тело"
+    },
+    "apiClientSectionSettings": {
+        "message": "Настройки"
+    },
+    "apiClientValue": {
+        "message": "Значение"
+    },
+    "apiClientParamKey": {
+        "message": "Параметр"
+    },
+    "apiClientParamEnabled": {
+        "message": "Отправлять параметр"
+    },
+    "apiClientParamAdd": {
+        "message": "Добавить параметр"
+    },
+    "apiClientParamDelete": {
+        "message": "Удалить параметр"
+    },
+    "apiClientParamsEmpty": {
+        "message": "Параметры добавляются в строку запроса (query) URL после существующих."
+    },
+    "apiClientHeaderKey": {
+        "message": "Заголовок"
+    },
+    "apiClientHeaderEnabled": {
+        "message": "Отправлять заголовок"
+    },
+    "apiClientHeaderAdd": {
+        "message": "Добавить заголовок"
+    },
+    "apiClientHeaderDelete": {
+        "message": "Удалить заголовок"
+    },
+    "apiClientHeadersEmpty": {
+        "message": "Часть заголовков (например, Accept и User-Agent) браузер добавляет автоматически."
+    },
+    "apiClientRuleHeaders": {
+        "message": "Заголовки, запрещённые для fetch() (forbidden headers), устанавливаются временным правилом declarativeNetRequest только для этого запроса: $1. Заголовок Cookie заменяет cookie сайта."
+    },
+    "apiClientBrowserHeaders": {
+        "message": "Эти заголовки формирует браузер, указанные значения не отправляются: $1."
+    },
+    "apiClientFieldKey": {
+        "message": "Поле"
+    },
+    "apiClientFieldEnabled": {
+        "message": "Отправлять поле"
+    },
+    "apiClientFieldAdd": {
+        "message": "Добавить поле"
+    },
+    "apiClientFieldDelete": {
+        "message": "Удалить поле"
+    },
+    "apiClientFieldsEmpty": {
+        "message": "Форма отправляется в формате application/x-www-form-urlencoded."
+    },
+    "apiClientBodyType": {
+        "message": "Формат тела"
+    },
+    "apiClientBodyNone": {
+        "message": "Без тела"
+    },
+    "apiClientBodyJson": {
+        "message": "JSON"
+    },
+    "apiClientBodyRaw": {
+        "message": "Текст"
+    },
+    "apiClientBodyForm": {
+        "message": "Форма"
+    },
+    "apiClientBodyNoneHint": {
+        "message": "Запрос отправляется без тела."
+    },
+    "apiClientBodyEditor": {
+        "message": "Тело запроса"
+    },
+    "apiClientContentType": {
+        "message": "Тип содержимого"
+    },
+    "apiClientContentTypeHint": {
+        "message": "Отправляется в заголовке Content-Type, если он не задан явно в заголовках."
+    },
+    "apiClientBodyless": {
+        "message": "Запросы $1 отправляются без тела. Тело сохраняется для других методов."
+    },
+    "apiClientSendCookies": {
+        "message": "Отправлять cookie сайта"
+    },
+    "apiClientSendCookiesHint": {
+        "message": "Выключено: запрос отправляется без cookie сайта (credentials: omit). Включено: браузер добавляет все cookie сайта, включая cookie текущей сессии (credentials: include)."
+    },
+    "apiClientResponse": {
+        "message": "Ответ"
+    },
+    "apiClientResponseIdle": {
+        "message": "Ответ отобразится здесь после отправки запроса."
+    },
+    "apiClientResponseWaiting": {
+        "message": "Ожидание ответа…"
+    },
+    "apiClientResponseSections": {
+        "message": "Разделы ответа"
+    },
+    "apiClientResponseBody": {
+        "message": "Тело"
+    },
+    "apiClientResponseHeaders": {
+        "message": "Заголовки"
+    },
+    "apiClientResponseBodyEditor": {
+        "message": "Тело ответа"
+    },
+    "apiClientResponseNoBody": {
+        "message": "Ответ не содержит тела."
+    },
+    "apiClientResponseBinary": {
+        "message": "Нетекстовое тело ($1) не отображается."
+    },
+    "apiClientResponseCookiesNote": {
+        "message": "Заголовок Set-Cookie не отображается, так как браузер скрывает его от fetch() (forbidden response header)."
+    },
+    "apiClientDuration": {
+        "message": "$1 мс"
+    },
+    "apiClientSizeBytes": {
+        "message": "$1 Б"
+    },
+    "apiClientSizeKilobytes": {
+        "message": "$1 КБ"
+    },
+    "apiClientSizeMegabytes": {
+        "message": "$1 МБ"
+    },
+    "apiClientInvalidRequest": {
+        "message": "Запрос не отправлен: $1"
+    },
+    "apiClientSendFailed": {
+        "message": "Ответ не получен: $1"
+    },
+    "apiClientTimedOut": {
+        "message": "Ответ не получен полностью за $1 с (таймаут), запрос прерван."
+    },
+    "apiClientResponseTruncated": {
+        "message": "Размер ответа превышает $1, загружена только начальная часть."
+    },
+    "apiClientSendFailedHint": {
+        "message": "Возможные причины: сервер не отвечает или недоступен либо браузер не доверяет его TLS-сертификату."
+    },
+    "apiClientNoAccess": {
+        "message": "У Requestion нет разрешения на доступ к $1 (host permission), без него браузер заблокирует ответ (CORS)."
+    },
+    "apiClientHostNotAllowed": {
+        "message": "Политика организации запрещает запросы к $1."
+    },
+    "apiClientAllowAccess": {
+        "message": "Разрешить и отправить"
+    },
+    "apiClientSidebar": {
+        "message": "История и окружения"
+    },
+    "apiClientHistory": {
+        "message": "История"
+    },
+    "apiClientHistoryHint": {
+        "message": "Здесь отображаются последние $1 отправленных запросов. Запросы сохраняются в исходном виде (с {{переменными}}, без подставленных значений)."
+    },
+    "apiClientHistoryNoResponse": {
+        "message": "Нет ответа"
+    },
+    "apiClientHistoryDelete": {
+        "message": "Удалить из истории"
+    },
+    "apiClientHistoryClear": {
+        "message": "Очистить историю"
+    },
+    "apiClientHistoryClearTitle": {
+        "message": "Очистить историю?"
+    },
+    "apiClientHistoryClearText": {
+        "message": "Все запросы будут удалены из истории. Открытые вкладки не изменятся."
+    },
+    "apiClientHistoryCancel": {
+        "message": "Отмена"
+    },
+    "apiClientHistoryActionFailed": {
+        "message": "Не удалось изменить историю. Попробуйте ещё раз."
+    },
+    "apiClientMissingVariables": {
+        "message": "Не заданы значения переменных: $1. Выберите окружение, в котором они определены, или добавьте их в текущее."
+    },
+    "apiClientEnvironment": {
+        "message": "Окружение"
+    },
+    "apiClientNoEnvironment": {
+        "message": "Без окружения"
+    },
+    "apiClientEnvironments": {
+        "message": "Окружения"
+    },
+    "apiClientEnvironmentsEmpty": {
+        "message": "Окружение хранит значения переменных (например, {{baseUrl}} или {{token}}) для одного стенда. Активное окружение выбирается в шапке страницы."
+    },
+    "apiClientEnvironmentAdd": {
+        "message": "Новое окружение"
+    },
+    "apiClientEnvironmentActive": {
+        "message": "Активно"
+    },
+    "apiClientEnvironmentVariableCount": {
+        "message": "Переменных: $1"
+    },
+    "apiClientEnvironmentEdit": {
+        "message": "Изменить окружение"
+    },
+    "apiClientEnvironmentEditNamed": {
+        "message": "Изменить $1"
+    },
+    "apiClientEnvironmentDelete": {
+        "message": "Удалить окружение"
+    },
+    "apiClientEnvironmentDeleteNamed": {
+        "message": "Удалить $1"
+    },
+    "apiClientEnvironmentsActionFailed": {
+        "message": "Не удалось изменить окружения. Попробуйте ещё раз."
+    },
+    "apiClientEnvironmentNewTitle": {
+        "message": "Новое окружение"
+    },
+    "apiClientEnvironmentEditTitle": {
+        "message": "Редактирование окружения"
+    },
+    "apiClientEnvironmentName": {
+        "message": "Название"
+    },
+    "apiClientEnvironmentNamePlaceholder": {
+        "message": "Тестовый стенд"
+    },
+    "apiClientEnvironmentCancel": {
+        "message": "Отмена"
+    },
+    "apiClientEnvironmentSave": {
+        "message": "Сохранить"
+    },
+    "apiClientEnvironmentSaveFailed": {
+        "message": "Не удалось сохранить окружение: $1"
+    },
+    "apiClientEnvironmentDeleteTitle": {
+        "message": "Удалить окружение?"
+    },
+    "apiClientEnvironmentDeleteText": {
+        "message": "Окружение «$1» и его переменные будут удалены без возможности восстановления."
+    },
+    "apiClientVariables": {
+        "message": "Переменные"
+    },
+    "apiClientVariableKey": {
+        "message": "Переменная"
+    },
+    "apiClientVariableEnabled": {
+        "message": "Использовать переменную"
+    },
+    "apiClientVariableSecret": {
+        "message": "Секрет"
+    },
+    "apiClientVariableEncrypted": {
+        "message": "Зашифровано (введите новое значение для замены)"
+    },
+    "apiClientVariableAdd": {
+        "message": "Добавить переменную"
+    },
+    "apiClientVariableDelete": {
+        "message": "Удалить переменную"
+    },
+    "apiClientVariablesHint": {
+        "message": "Синтаксис переменной: {{name}}. Поддерживается в URL, параметрах, заголовках и теле запроса."
+    },
+    "apiClientSecretsWarning": {
+        "message": "Значения секретов скрыты в интерфейсе, но хранятся в профиле браузера в незашифрованном виде. Для шифрования мастер-паролем используйте кнопку в шапке страницы."
+    },
+    "apiClientVaultRequiredWarning": {
+        "message": "Политика организации требует шифрования секретов. Значения переменных с флажком «Секрет» не сохраняются, пока шифрование не включено."
+    },
+    "apiClientSecretsEncrypted": {
+        "message": "Значения секретов зашифрованы мастер-паролем и не отображаются в редакторе. Для замены введите новое значение."
+    },
+    "apiClientSecretsLocked": {
+        "message": "Хранилище заблокировано, значения зашифрованных переменных недоступны: $1. Разблокируйте хранилище в шапке страницы."
+    },
+    "apiClientVaultRequired": {
+        "message": "Политика организации требует шифрования секретов. Включите шифрование, чтобы использовать $1."
+    },
+    "apiClientVaultSetupOpen": {
+        "message": "Зашифровать секреты"
+    },
+    "apiClientVaultUnlockOpen": {
+        "message": "Разблокировать секреты"
+    },
+    "apiClientVaultLock": {
+        "message": "Заблокировать секреты"
+    },
+    "apiClientVaultDisableOpen": {
+        "message": "Выключить шифрование"
+    },
+    "apiClientVaultSettingsOpen": {
+        "message": "Настройки хранилища"
+    },
+    "apiClientVaultSettingsTitle": {
+        "message": "Смена мастер-пароля"
+    },
+    "apiClientVaultChangeText": {
+        "message": "Значения секретов будут перешифрованы ключом, производным от нового пароля."
+    },
+    "apiClientVaultCurrentPassword": {
+        "message": "Текущий пароль"
+    },
+    "apiClientVaultNewPassword": {
+        "message": "Новый пароль"
+    },
+    "apiClientVaultChangeSubmit": {
+        "message": "Сменить пароль"
+    },
+    "apiClientVaultFailed": {
+        "message": "Хранилище не отвечает. Попробуйте ещё раз."
+    },
+    "apiClientVaultCancel": {
+        "message": "Отмена"
+    },
+    "apiClientVaultSetupTitle": {
+        "message": "Шифрование секретов"
+    },
+    "apiClientVaultSetupText": {
+        "message": "Значения секретов во всех окружениях будут зашифрованы ключом, производным от мастер-пароля (PBKDF2). Сам пароль не сохраняется."
+    },
+    "apiClientVaultPassword": {
+        "message": "Мастер-пароль"
+    },
+    "apiClientVaultPasswordHint": {
+        "message": "Не менее $1 символов"
+    },
+    "apiClientVaultPasswordRepeat": {
+        "message": "Подтверждение пароля"
+    },
+    "apiClientVaultSetupWarning": {
+        "message": "Восстановление пароля не предусмотрено. При утере пароля зашифрованные значения можно только удалить (сброс хранилища) и ввести заново."
+    },
+    "apiClientVaultAutoLockHint": {
+        "message": "Хранилище блокируется автоматически после $1 мин бездействия и при закрытии браузера."
+    },
+    "apiClientVaultPasswordMismatch": {
+        "message": "Пароли не совпадают."
+    },
+    "apiClientVaultSetupSubmit": {
+        "message": "Зашифровать"
+    },
+    "apiClientVaultUnlockTitle": {
+        "message": "Разблокировка секретов"
+    },
+    "apiClientVaultUnlockText": {
+        "message": "Введите мастер-пароль для подстановки зашифрованных значений в запросы."
+    },
+    "apiClientVaultUnlockSubmit": {
+        "message": "Разблокировать"
+    },
+    "apiClientVaultWrongPassword": {
+        "message": "Неверный пароль."
+    },
+    "apiClientVaultForgot": {
+        "message": "Забыли пароль?"
+    },
+    "apiClientVaultDisableTitle": {
+        "message": "Выключить шифрование?"
+    },
+    "apiClientVaultDisableText": {
+        "message": "Значения секретов будут расшифрованы и сохранены в профиле браузера в незашифрованном виде. Для подтверждения введите мастер-пароль."
+    },
+    "apiClientVaultDisableSubmit": {
+        "message": "Выключить шифрование"
+    },
+    "apiClientVaultResetTitle": {
+        "message": "Сбросить хранилище?"
+    },
+    "apiClientVaultResetText": {
+        "message": "Зашифрованные значения будут удалены, шифрование — выключено. Переменные сохранятся с пустыми значениями, их потребуется ввести заново."
+    },
+    "apiClientVaultResetSubmit": {
+        "message": "Удалить зашифрованные значения"
+    },
+    "apiClientVaultLockedSave": {
+        "message": "Хранилище заблокировано. Для сохранения значений секретов разблокируйте его в шапке страницы."
+    },
+    "apiClientVaultRequiredSave": {
+        "message": "Политика организации требует шифрования секретов. Включите шифрование и сохраните повторно."
+    },
+    "apiClientCurlImportOpen": {
+        "message": "Импорт cURL"
+    },
+    "apiClientCurlImportTitle": {
+        "message": "Импорт команды cURL"
+    },
+    "apiClientCurlCommand": {
+        "message": "Команда cURL"
+    },
+    "apiClientCurlCommandHint": {
+        "message": "Например, команда из DevTools → Copy as cURL (bash). Запрос откроется в новой вкладке. Синтаксис cmd и PowerShell не поддерживается."
+    },
+    "apiClientCurlCommandPlaceholder": {
+        "message": "curl 'https://api.example.com/users' -H 'Accept: application/json'"
+    },
+    "apiClientCurlImportFailed": {
+        "message": "Не удалось импортировать команду: $1"
+    },
+    "apiClientCurlImportSubmit": {
+        "message": "Импортировать"
+    },
+    "apiClientCurlExportOpen": {
+        "message": "Скопировать как cURL"
+    },
+    "apiClientCurlExportTitle": {
+        "message": "Скопировать как cURL"
+    },
+    "apiClientCurlExportCommand": {
+        "message": "Команда (bash)"
+    },
+    "apiClientCurlExportSecrets": {
+        "message": "Подставить значения секретов"
+    },
+    "apiClientCurlExportSecretsHint": {
+        "message": "Если флажок снят, секреты остаются в виде {{name}} и не попадают в буфер обмена."
+    },
+    "apiClientCurlExportMissing": {
+        "message": "Переменные без значений оставлены в исходном виде: $1."
+    },
+    "apiClientCurlExportCookies": {
+        "message": "Cookie браузера в команду не включаются. Если они требуются серверу, добавьте заголовок Cookie."
+    },
+    "apiClientCurlExportCopy": {
+        "message": "Скопировать"
+    },
+    "apiClientCurlExportCopied": {
+        "message": "Скопировано в буфер обмена."
+    },
+    "apiClientCurlExportCopyFailed": {
+        "message": "Не удалось скопировать. Выделите команду и скопируйте вручную."
+    },
+    "apiClientCollections": {
+        "message": "Коллекции"
+    },
+    "apiClientCollectionsEmpty": {
+        "message": "Хранение запросов в коллекциях и папках. Сохранение запроса из текущей вкладки — Ctrl+S."
+    },
+    "apiClientCollectionAdd": {
+        "message": "Новая коллекция"
+    },
+    "apiClientCollectionsLimit": {
+        "message": "Максимальное количество коллекций: $1."
+    },
+    "apiClientCollectionsFailed": {
+        "message": "Не удалось изменить коллекцию."
+    },
+    "apiClientCollectionMenu": {
+        "message": "Действия: $1"
+    },
+    "apiClientCollectionNewRequest": {
+        "message": "Новый запрос"
+    },
+    "apiClientCollectionNewFolder": {
+        "message": "Новая папка"
+    },
+    "apiClientCollectionRename": {
+        "message": "Переименовать"
+    },
+    "apiClientCollectionDelete": {
+        "message": "Удалить"
+    },
+    "apiClientCollectionCreateTitle": {
+        "message": "Новая коллекция"
+    },
+    "apiClientCollectionFolderTitle": {
+        "message": "Новая папка"
+    },
+    "apiClientCollectionRequestTitle": {
+        "message": "Новый запрос"
+    },
+    "apiClientCollectionRenameTitle": {
+        "message": "Переименовать"
+    },
+    "apiClientCollectionName": {
+        "message": "Название"
+    },
+    "apiClientCollectionCreate": {
+        "message": "Создать"
+    },
+    "apiClientCollectionSave": {
+        "message": "Сохранить"
+    },
+    "apiClientCollectionCancel": {
+        "message": "Отмена"
+    },
+    "apiClientCollectionDeleteTitle": {
+        "message": "Удалить из коллекций?"
+    },
+    "apiClientCollectionDeleteText": {
+        "message": "Элемент «$1» будет удалён (для папки или коллекции — со всем содержимым). Запросы в открытых вкладках сохранятся."
+    },
+    "apiClientSave": {
+        "message": "Сохранить в коллекцию"
+    },
+    "apiClientSaveHint": {
+        "message": "Сохранить в коллекцию (Ctrl+S)"
+    },
+    "apiClientSaveShort": {
+        "message": "Сохранить"
+    },
+    "apiClientCurlShort": {
+        "message": "cURL"
+    },
+    "apiClientRequestUnsaved": {
+        "message": "Не сохранён в коллекцию"
+    },
+    "apiClientSaveTitle": {
+        "message": "Сохранить в коллекцию"
+    },
+    "apiClientSaveName": {
+        "message": "Название запроса"
+    },
+    "apiClientSaveCollection": {
+        "message": "Коллекция"
+    },
+    "apiClientSaveCollectionName": {
+        "message": "Название новой коллекции"
+    },
+    "apiClientSaveFolder": {
+        "message": "Папка"
+    },
+    "apiClientSaveTop": {
+        "message": "В корне коллекции"
+    },
+    "apiClientSaveFailed": {
+        "message": "Не удалось сохранить запрос."
+    },
+    "apiClientTabUnsaved": {
+        "message": "Несохранённые изменения"
+    },
+    "apiClientImportOpen": {
+        "message": "Импорт"
+    },
+    "apiClientImportTitle": {
+        "message": "Импорт коллекции"
+    },
+    "apiClientImportHint": {
+        "message": "Поддерживаемые форматы (JSON, до 10 МБ): коллекция Postman (v2.0, v2.1), окружение Postman, спецификация OpenAPI 3.0 или 3.1."
+    },
+    "apiClientImportFile": {
+        "message": "Файл"
+    },
+    "apiClientImportFileHint": {
+        "message": "JSON, до 10 МБ"
+    },
+    "apiClientImportText": {
+        "message": "Вставить текстовое содержимое файла"
+    },
+    "apiClientImportFileUnreadable": {
+        "message": "Не удалось прочитать файл."
+    },
+    "apiClientImportInvalid": {
+        "message": "Файл не может быть импортирован:"
+    },
+    "apiClientImportPreview": {
+        "message": "Предпросмотр импорта"
+    },
+    "apiClientImportCollection": {
+        "message": "Новая коллекция «$1» (запросов: $2, папок: $3)."
+    },
+    "apiClientImportEnvironment": {
+        "message": "Новое окружение «$1» (переменных: $2). Для подстановки переменных выберите окружение в шапке страницы."
+    },
+    "apiClientImportSecretsPlain": {
+        "message": "Значения секретов будут сохранены в незашифрованном виде. Для шифрования включите его в шапке страницы до импорта."
+    },
+    "apiClientImportSecretsEncrypted": {
+        "message": "Значения секретов будут зашифрованы мастер-паролем."
+    },
+    "apiClientImportSecretsLocked": {
+        "message": "Хранилище заблокировано, значения секретов не будут импортированы. Разблокируйте хранилище в шапке страницы и повторите импорт."
+    },
+    "apiClientImportSecretsRequired": {
+        "message": "Политика организации требует шифрования секретов, значения секретов не будут импортированы. Включите шифрование и повторите импорт."
+    },
+    "apiClientImportEnvironmentsLimit": {
+        "message": "Максимальное количество окружений: $1."
+    },
+    "apiClientImportGaps": {
+        "message": "Не импортируется:"
+    },
+    "apiClientImportGapScripts": {
+        "message": "Скрипты и тесты (скриптов: $2): код из файла не выполняется"
+    },
+    "apiClientImportGapExamples": {
+        "message": "Сохранённые примеры ответов (примеров: $2)"
+    },
+    "apiClientImportGapBodies": {
+        "message": "Тела типа $1 (запросов: $2): поддерживаются только JSON, текст и формы x-www-form-urlencoded"
+    },
+    "apiClientImportGapBodiesOfBodyless": {
+        "message": "Тела запросов $1 (запросов: $2): запросы с этими методами отправляются без тела"
+    },
+    "apiClientImportGapAuths": {
+        "message": "Авторизация типа $1 (запросов: $2)"
+    },
+    "apiClientImportGapBasicWithVariables": {
+        "message": "Basic-авторизация с {{переменными}} (запросов: $2): учётные данные закодированы в Base64, подстановка переменных невозможна"
+    },
+    "apiClientImportGapMethods": {
+        "message": "Запросы с методами $1 (запросов: $2): методы не поддерживаются"
+    },
+    "apiClientImportGapDynamicVariables": {
+        "message": "Динамические переменные $1 (запросов: $2): не поддерживаются и остаются в исходном виде"
+    },
+    "apiClientImportGapDeepFolders": {
+        "message": "Папки с вложенностью более пяти уровней (папок: $2): их запросы перемещены в папку пятого уровня"
+    },
+    "apiClientImportGapVariableNames": {
+        "message": "Переменные с именами, недопустимыми в синтаксисе {{name}}: $1"
+    },
+    "apiClientImportEmptySecrets": {
+        "message": "Перед отправкой запросов задайте в окружении значения секретов: $1."
+    },
+    "apiClientImportGapRelativeServer": {
+        "message": "Относительный URL сервера $1: укажите полный URL API в переменной baseUrl окружения"
+    },
+    "apiClientImportGapExternalRefs": {
+        "message": "Ссылки на внешние файлы $1 (ссылок: $2): поддерживаются только ссылки внутри файла"
+    },
+    "apiClientImportGapCookieParameters": {
+        "message": "Cookie-параметры $1 (параметров: $2)"
+    },
+    "apiClientImportGapOwnServers": {
+        "message": "Операции с собственным полем servers (запросов: $2): отправляются на baseUrl, как остальные"
+    },
+    "apiClientImportSubmit": {
+        "message": "Импортировать"
+    },
+    "apiClientImportCancel": {
+        "message": "Отмена"
+    },
+    "apiClientImportFailed": {
+        "message": "Не удалось импортировать файл: $1"
+    },
+    "apiClientImportUnnamed": {
+        "message": "Без названия"
+    },
+    "apiClientImportVariablesSuffix": {
+        "message": ": переменные"
+    },
+    "apiClientCurlCancel": {
+        "message": "Отмена"
+    },
+    "dialogClose": {
+        "message": "Закрыть"
+    },
+    "codeEditorFormat": {
+        "message": "Форматировать"
+    },
+    "fileDropzonePrompt": {
+        "message": "Перетащите файл или нажмите для выбора"
+    },
+    "fileDropzoneReplace": {
+        "message": "Перетащите или выберите другой файл для замены"
+    },
+    "checklistAnyNumber": {
+        "message": "множественный выбор"
+    }
+}

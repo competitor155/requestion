@@ -1,0 +1,27 @@
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-m);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.mark {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--control-height-s);
+    height: var(--control-height-s);
+    border-radius: var(--radius-m);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    font-size: var(--font-size-m);
+}
+
+.glyph {
+    width: 1.5em;
+    height: 1.5em;
+    stroke-width: 1.9;
+}

@@ -1,0 +1,168 @@
+import { formatIssues, RpcCallers, validate, type RpcCaller, type RpcMethod } from '#shared/lib';
+
+import { RpcError, rpcFailure, RpcErrorCodes, rpcRequest, type RpcResponse } from './protocol.ts';
+
+const WEB_ORIGIN_RGX = /^https?:\/\//;
+
+const EXTENSION_BASE_PATH = 'chrome-extension://';
+
+/** The parts of chrome.runtime.MessageSender the router relies on */
+export interface MessageSender {
+    /** Id of the sending extension */
+    readonly id?: string;
+    /** Origin of the sending page or frame */
+    readonly origin?: string;
+    /** Present when a content script or an extension page in a tab sent the message */
+    readonly tab?: MessageSenderTab;
+}
+
+/** The part of chrome.tabs.Tab the router relies on */
+interface MessageSenderTab {
+    /** Id of the tab */
+    readonly id?: NotRequired<number>;
+}
+
+export interface HandlerContext {
+    /** Kind of context that called the method */
+    readonly caller: RpcCaller;
+    /** Origin reported by the browser, never taken from the message itself */
+    readonly origin: string;
+    /** Tab of the sender as the browser reports it; none for a page outside a tab, such as the popup */
+    readonly tabId?: number;
+}
+
+export type Handler<Params, Result> = (params: Params, context: HandlerContext) => Result | Promise<Result>;
+
+/** A registered method */
+interface Route {
+    /** Contexts allowed to call the method */
+    readonly callers: readonly RpcCaller[];
+    /** Validates raw params and runs the handler */
+    readonly run: (rawParams: unknown, context: HandlerContext) => Promise<RpcResponse>;
+}
+
+export interface Router {
+    /** Registers the handler of a method */
+    on<Params, Result>(method: RpcMethod<Params, Result>, handler: Handler<Params, Result>): void;
+    /** Resolves to undefined for messages that are not ours */
+    dispatch(message: unknown, sender: MessageSender): Promise<NotRequired<RpcResponse>>;
+    /** Subscribes to chrome.runtime.onMessage */
+    listen(): void;
+}
+
+interface RouterOptions {
+    /** Id of this extension */
+    readonly extensionId: string;
+}
+
+const getCallerCtx = (sender: MessageSender, extensionId: string): NotRequired<HandlerContext> => {
+    const extensionOrigin = EXTENSION_BASE_PATH + extensionId;
+
+    if (sender.id !== extensionId || !sender.origin) {
+        return;
+    }
+
+    if (sender.origin === extensionOrigin) {
+        return {
+            caller: RpcCallers.EXTENSION,
+            origin: sender.origin,
+            ...(sender.tab?.id !== undefined && { tabId: sender.tab.id }),
+        };
+    }
+
+    if (sender.tab && WEB_ORIGIN_RGX.test(sender.origin)) {
+        return {
+            caller: RpcCallers.CONTENT_SCRIPT,
+            origin: sender.origin,
+        };
+    }
+
+    return;
+};
+
+export const createRouter = ({ extensionId }: RouterOptions): Router => {
+    const routes = new Map<string, Route>();
+
+    const dispatch = async (message: unknown, sender: MessageSender): Promise<NotRequired<RpcResponse>> => {
+        const request = validate(rpcRequest, message);
+
+        if (!request.ok) {
+            return;
+        }
+
+        const { method, params } = request.value;
+
+        const context = getCallerCtx(sender, extensionId);
+
+        if (!context) {
+            return rpcFailure(RpcErrorCodes.FORBIDDEN, 'sender is not allowed');
+        }
+
+        const route = routes.get(method);
+
+        if (!route) {
+            return rpcFailure(RpcErrorCodes.UNKNOWN_METHOD, `unknown method ${method}`);
+        }
+
+        if (!route.callers.includes(context.caller)) {
+            return rpcFailure(RpcErrorCodes.FORBIDDEN, `${context.caller} may not call ${method}`);
+        }
+
+        try {
+            return await route.run(params, context);
+        } catch (error) {
+            if (error instanceof RpcError) {
+                return rpcFailure(error.code, error.message);
+            }
+
+            /** Anything but RpcError is a bug: its details go to the log, never to the caller */
+            console.error(`[rpc] ${method} failed`, error);
+
+            return rpcFailure(RpcErrorCodes.INTERNAL, 'internal error');
+        }
+    };
+
+    const on: Router['on'] = (method, handler) => {
+        if (routes.has(method.name)) {
+            throw new Error(`Duplicate handler for ${method.name}`);
+        }
+
+        routes.set(method.name, {
+            callers: method.callers,
+            run: async (rawParams, context) => {
+                const params = validate(method.params, rawParams);
+
+                if (!params.ok) {
+                    return rpcFailure(RpcErrorCodes.BAD_REQUEST, formatIssues(params.issues));
+                }
+
+                return {
+                    ok: true,
+                    result: await handler(params.value, context),
+                };
+            },
+        });
+    };
+
+    const listen: VoidFunction = () => {
+        chrome.runtime.onMessage.addListener((message: unknown, sender, sendResponse) => {
+            const isValid = validate(rpcRequest, message).ok;
+
+            if (!isValid) {
+                return false;
+            }
+
+            dispatch(message, sender).then(sendResponse, (error: unknown) => {
+                console.error('[rpc] dispatch failed', error);
+            });
+
+            return true;
+        });
+    };
+
+    return {
+        on,
+        listen,
+        dispatch,
+    };
+};

@@ -1,0 +1,81 @@
+import type { FC } from 'react';
+
+import { Button, ButtonSizes } from '../Button/index.ts';
+import { Icon, IconNames } from '../Icon/index.ts';
+import { Typography, TypographyColors, TypographySizes } from '../Typography/index.ts';
+
+import { useTranslation } from '#shared/i18n';
+import { createKeyValueRow, updateKeyValueRow, type KeyValue, type KeyValueRow } from '#shared/lib';
+
+import styles from './KeyValueTable.module.css';
+import { KeyValueTableRow } from './KeyValueTableRow.tsx';
+import type { KeyValueTableLabels } from './types.ts';
+
+interface KeyValueTableProps {
+    /** Texts of the columns, the controls and the empty table */
+    labels: KeyValueTableLabels;
+    /** Rows of the table */
+    rows: readonly KeyValueRow[];
+    /** Whether the form refuses a row without a key */
+    isKeyRequired?: boolean;
+    /** Whether the fields colour {{templates}} */
+    isWithTemplates?: boolean;
+    /** Called with the changed rows */
+    onRowsChange: (rows: KeyValueRow[]) => void;
+}
+
+/** Pairs that can be switched off; every field of a row is named for assistive technology, so the column titles are visual */
+export const KeyValueTable: FC<KeyValueTableProps> = ({
+    labels,
+    rows,
+    isKeyRequired = false,
+    isWithTemplates = false,
+    onRowsChange,
+}) => {
+    const { t } = useTranslation();
+
+    const onRowAdd = () => onRowsChange([...rows, createKeyValueRow()]);
+
+    const onRowChange = (rowId: string, patch: Partial<KeyValue>) =>
+        onRowsChange(updateKeyValueRow(rows, rowId, patch));
+
+    const onRowRemove = (rowId: string) => onRowsChange(rows.filter(row => row.rowId !== rowId));
+
+    return (
+        <div className={styles.content}>
+            {!!rows.length && (
+                <div className={styles.table}>
+                    <div aria-hidden='true' className={styles.columns}>
+                        <span />
+                        <span>{t(labels.key)}</span>
+                        <span>{t(labels.value)}</span>
+                        <span />
+                    </div>
+
+                    {rows.map(row => (
+                        <KeyValueTableRow
+                            key={row.rowId}
+                            isKeyRequired={isKeyRequired}
+                            isWithTemplates={isWithTemplates}
+                            labels={labels}
+                            row={row}
+                            onChange={onRowChange}
+                            onRemove={onRowRemove}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {!rows.length && (
+                <Typography color={TypographyColors.HINT} size={TypographySizes.SMALL}>
+                    {t(labels.empty)}
+                </Typography>
+            )}
+
+            <Button size={ButtonSizes.SMALL} onClick={onRowAdd}>
+                <Icon name={IconNames.PLUS} />
+                {t(labels.add)}
+            </Button>
+        </div>
+    );
+};

@@ -1,0 +1,1591 @@
+{
+    "extName": {
+        "message": "Requestion",
+        "description": "Extension name. Not translated."
+    },
+    "extDescription": {
+        "message": "HTTP request redirection, blocking and mocking, header modification and an API client. No servers, accounts or telemetry.",
+        "description": "Store and extensions page description. At most 132 characters."
+    },
+    "popupTagline": {
+        "message": "HTTP request redirection, blocking and modification. All data is stored locally in the browser."
+    },
+    "popupOpenDashboard": {
+        "message": "Open dashboard"
+    },
+    "popupOpenApiClient": {
+        "message": "Open API client"
+    },
+    "navLabel": {
+        "message": "Dashboard sections",
+        "description": "Accessible name of the sidebar navigation."
+    },
+    "rulesTitle": {
+        "message": "Rules"
+    },
+    "sitesTitle": {
+        "message": "Allowed sites"
+    },
+    "settingsTitle": {
+        "message": "Settings"
+    },
+    "mocksTitle": {
+        "message": "Mock API"
+    },
+    "policyTitle": {
+        "message": "Organization policy"
+    },
+    "policyDescription": {
+        "message": "Settings set by your organization's administrator through enterprise browser policy (managed storage). They take precedence over user settings and cannot be edited in the extension."
+    },
+    "policyEmptyTitle": {
+        "message": "No policy set"
+    },
+    "policyEmptyText": {
+        "message": "No organization restrictions apply. All features are available, and all settings are user-defined."
+    },
+    "policyValuesTitle": {
+        "message": "Policy settings"
+    },
+    "policyIssues": {
+        "message": "The policy contains errors. Invalid restrictions fall back to their strictest form, and other invalid values are ignored."
+    },
+    "policyDisabledFeatures": {
+        "message": "Disabled features"
+    },
+    "policyAllowedHosts": {
+        "message": "Allowed sites"
+    },
+    "policyAllowUserRules": {
+        "message": "User rules and mocks"
+    },
+    "policyRequireVault": {
+        "message": "Secret encryption"
+    },
+    "policyPresetBundle": {
+        "message": "Organization rules and mocks"
+    },
+    "policyNotSet": {
+        "message": "Not set"
+    },
+    "policyNoFeaturesOff": {
+        "message": "None"
+    },
+    "policyNoHosts": {
+        "message": "None (access to all sites is blocked)"
+    },
+    "policyUserRulesAllowed": {
+        "message": "Allowed"
+    },
+    "policyUserRulesForbidden": {
+        "message": "Not allowed (only organization rules and mocks apply)"
+    },
+    "policyVaultRequired": {
+        "message": "Required"
+    },
+    "policyVaultOptional": {
+        "message": "Optional"
+    },
+    "policyPresetCounts": {
+        "message": "Rules: $1, mocks: $2",
+        "description": "$1 and $2 are numbers."
+    },
+    "policyPresetBroken": {
+        "message": "Not applied (the bundle contains errors)"
+    },
+    "policyFeatureRedirect": {
+        "message": "Redirection"
+    },
+    "policyFeatureHeaders": {
+        "message": "Header modification"
+    },
+    "policyFeatureBlock": {
+        "message": "Blocking"
+    },
+    "policyFeatureMocks": {
+        "message": "Mock API"
+    },
+    "policyFeatureApiClient": {
+        "message": "API client"
+    },
+    "policyOpen": {
+        "message": "Open policy"
+    },
+    "policyBlockedBadge": {
+        "message": "Disabled by policy"
+    },
+    "policySourceBadge": {
+        "message": "Set by policy"
+    },
+    "transferTitle": {
+        "message": "Import and export"
+    },
+    "transferDescription": {
+        "message": "Transfer rules, mocks and environments between browsers and users as a JSON file (easy to keep in git)."
+    },
+    "transferExportTitle": {
+        "message": "Export"
+    },
+    "transferExportParts": {
+        "message": "File contents"
+    },
+    "transferPartRules": {
+        "message": "Rules"
+    },
+    "transferPartMocks": {
+        "message": "Mocks"
+    },
+    "transferPartEnvironments": {
+        "message": "Environments"
+    },
+    "transferPartCollections": {
+        "message": "Collections"
+    },
+    "transferExportHint": {
+        "message": "Organization policy records and secret values are not exported (secret variables are exported by name only)."
+    },
+    "transferExportSubmit": {
+        "message": "Download JSON"
+    },
+    "transferImportTitle": {
+        "message": "Import"
+    },
+    "transferImportHint": {
+        "message": "Records with a matching id replace existing ones, and nothing is deleted. Secret values in this browser and policy records stay unchanged."
+    },
+    "transferImportFile": {
+        "message": "File"
+    },
+    "transferImportFileHint": {
+        "message": "JSON, up to 5 MB"
+    },
+    "transferImportText": {
+        "message": "Paste the file's text contents"
+    },
+    "transferFileUnreadable": {
+        "message": "Failed to read the file."
+    },
+    "transferImportInvalid": {
+        "message": "The file cannot be imported:"
+    },
+    "transferPreview": {
+        "message": "Import preview"
+    },
+    "transferCounts": {
+        "message": "$1 — new: $2, replaced: $3, skipped (policy records): $4",
+        "description": "$1 is a list such as Rules; $2, $3 and $4 are numbers."
+    },
+    "transferImportSubmit": {
+        "message": "Import"
+    },
+    "transferImportDone": {
+        "message": "Import completed."
+    },
+    "transferImportFailed": {
+        "message": "Import failed: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "interceptionLabel": {
+        "message": "Request interception"
+    },
+    "interceptionOn": {
+        "message": "Enabled rules and mocks apply on allowed sites."
+    },
+    "interceptionOff": {
+        "message": "Interception paused (rules and mocks are not applied)."
+    },
+    "interceptionPaused": {
+        "message": "Interception is paused. Rules are not applied."
+    },
+    "interceptionTurnOn": {
+        "message": "Turn on"
+    },
+    "interceptionSaveFailed": {
+        "message": "Failed to toggle interception. Try again."
+    },
+    "rulesDescription": {
+        "message": "Redirect and block requests, modify their headers. If several rules match a request, the one higher in the list applies. Header modification rules all apply, and for the same header the rule higher in the list takes precedence."
+    },
+    "rulesAdd": {
+        "message": "New rule"
+    },
+    "rulesNoSites": {
+        "message": "Add allowed sites to apply rules. The list of allowed sites is currently empty."
+    },
+    "rulesOpenSites": {
+        "message": "Add site"
+    },
+    "rulesPolicyOnly": {
+        "message": "The organization policy allows only organization rules. User rules are not applied."
+    },
+    "rulesFeaturesOff": {
+        "message": "Disabled by the organization policy: $1. Rules of these types are not applied.",
+        "description": "$1 is a list of features, such as Redirection, Blocking."
+    },
+    "rulesEmptyTitle": {
+        "message": "No rules yet"
+    },
+    "rulesEmptyText": {
+        "message": "Request redirection and blocking, header modification by URL pattern."
+    },
+    "rulesEdit": {
+        "message": "Edit"
+    },
+    "rulesDelete": {
+        "message": "Delete"
+    },
+    "rulesActionFailed": {
+        "message": "Failed to update the rule. Try again."
+    },
+    "ruleNoAccess": {
+        "message": "Requestion has no host permission for $1, so the rule is not applied there.",
+        "description": "$1 is a host name, such as api.example.com."
+    },
+    "ruleHostNotAllowed": {
+        "message": "The organization policy blocks access to $1, so the rule is not applied there.",
+        "description": "$1 is a host name, such as api.example.com."
+    },
+    "ruleAllowAccess": {
+        "message": "Allow access"
+    },
+    "ruleBadgeRedirect": {
+        "message": "Redirect",
+        "description": "Short name of the action in the rule list."
+    },
+    "ruleBadgeHeaders": {
+        "message": "Headers",
+        "description": "Short name of the action in the rule list."
+    },
+    "ruleBadgeBlock": {
+        "message": "Block",
+        "description": "Short name of the action in the rule list."
+    },
+    "ruleSummaryRedirect": {
+        "message": "To $1",
+        "description": "$1 is the redirect target, such as a URL."
+    },
+    "ruleSummaryTransform": {
+        "message": "URL transform: $1",
+        "description": "$1 lists the changed parts, such as Port: 8080."
+    },
+    "ruleSummaryHeaders": {
+        "message": "Modified headers: $1",
+        "description": "$1 lists header names, such as X-Debug, Cookie."
+    },
+    "rulesNewTitle": {
+        "message": "New rule"
+    },
+    "rulesEditTitle": {
+        "message": "Edit rule"
+    },
+    "rulesCancel": {
+        "message": "Cancel"
+    },
+    "rulesSave": {
+        "message": "Save"
+    },
+    "rulesSaveFailed": {
+        "message": "Failed to save the rule: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "rulesDeleteTitle": {
+        "message": "Delete rule?"
+    },
+    "rulesDeleteText": {
+        "message": "The rule “$1” will be permanently deleted.",
+        "description": "$1 is the rule name."
+    },
+    "ruleName": {
+        "message": "Name"
+    },
+    "ruleNamePlaceholder": {
+        "message": "For example, Staging API"
+    },
+    "ruleStepMatch": {
+        "message": "Match conditions"
+    },
+    "ruleStepAction": {
+        "message": "Action"
+    },
+    "ruleType": {
+        "message": "Action type"
+    },
+    "ruleTypeRedirect": {
+        "message": "Redirect"
+    },
+    "ruleTypeHeaders": {
+        "message": "Modify headers"
+    },
+    "ruleTypeBlock": {
+        "message": "Block"
+    },
+    "ruleTypeRedirectHint": {
+        "message": "Redirects matching requests to another URL."
+    },
+    "ruleTypeHeadersHint": {
+        "message": "Sets, appends or removes headers of matching requests and their responses."
+    },
+    "ruleTypeBlockHint": {
+        "message": "Matching requests are cancelled before reaching the network (net::ERR_BLOCKED_BY_CLIENT)."
+    },
+    "ruleSyntax": {
+        "message": "Pattern syntax"
+    },
+    "ruleSyntaxFilter": {
+        "message": "URL filter"
+    },
+    "ruleSyntaxRegex": {
+        "message": "Regular expression"
+    },
+    "rulePattern": {
+        "message": "URL pattern"
+    },
+    "rulePatternFilterHint": {
+        "message": "|| — start of a domain, * — any characters, ^ — separator (for example, / or ?)."
+    },
+    "rulePatternRegexHint": {
+        "message": "RE2 syntax (used by Chrome). Capture groups can be substituted into the redirect URL."
+    },
+    "rulePatternFilterPlaceholder": {
+        "message": "||api.example.com/v1/",
+        "description": "Sample URL filter. Not translated."
+    },
+    "rulePatternRegexPlaceholder": {
+        "message": "^https://api\\.example\\.com/(.*)",
+        "description": "Sample regular expression. Not translated."
+    },
+    "patternExamplesLabel": {
+        "message": "Pattern examples"
+    },
+    "patternFilterTitle": {
+        "message": "URL filter syntax"
+    },
+    "patternFilterDomain": {
+        "message": "start of a domain (including subdomains)"
+    },
+    "patternFilterEdge": {
+        "message": "anchor (start or end of the URL)"
+    },
+    "patternFilterAny": {
+        "message": "any sequence of characters (wildcard)"
+    },
+    "patternFilterSeparator": {
+        "message": "separator (any character except letters, digits and _ - . %) or the end of the URL"
+    },
+    "patternExamplesTitle": {
+        "message": "Examples"
+    },
+    "patternFilterExampleSite": {
+        "message": "any request to example.com and its subdomains"
+    },
+    "patternFilterExamplePrefix": {
+        "message": "URLs starting with api.example.com/v1/"
+    },
+    "patternFilterExampleExact": {
+        "message": "exact match (this URL only)"
+    },
+    "patternFilterExampleScripts": {
+        "message": "URLs on cdn.example.com that contain .js"
+    },
+    "patternFilterExampleContains": {
+        "message": "any URL containing the substring /graphql"
+    },
+    "patternRegexTitle": {
+        "message": "Regular expressions (RE2 syntax)"
+    },
+    "patternRegexExampleGroup": {
+        "message": "the part after /v1/ is captured in group \\1 (for redirect substitution)"
+    },
+    "patternRegexExampleWww": {
+        "message": "http and https schemes, with or without the www subdomain"
+    },
+    "patternRegexExampleImages": {
+        "message": "images with the .png, .jpg and .jpeg extensions"
+    },
+    "patternRegexExampleId": {
+        "message": "URLs ending with /users/ and a numeric ID"
+    },
+    "patternRegexNote": {
+        "message": "The expression is matched against the full URL (including the scheme). Escape dots (\\.). RE2 does not support lookarounds or backreferences."
+    },
+    "ruleConditions": {
+        "message": "Additional conditions"
+    },
+    "ruleMethods": {
+        "message": "HTTP methods"
+    },
+    "ruleMethodsHint": {
+        "message": "If none are selected, all methods match."
+    },
+    "ruleResourceTypes": {
+        "message": "Resource types"
+    },
+    "ruleResourceTypesHint": {
+        "message": "If none are selected, all types match, including top-level documents (main_frame)."
+    },
+    "resourceTypeMainFrame": {
+        "message": "Pages (main_frame)"
+    },
+    "resourceTypeSubFrame": {
+        "message": "Frames (sub_frame)"
+    },
+    "resourceTypeStylesheet": {
+        "message": "Stylesheets"
+    },
+    "resourceTypeScript": {
+        "message": "Scripts"
+    },
+    "resourceTypeImage": {
+        "message": "Images"
+    },
+    "resourceTypeFont": {
+        "message": "Fonts"
+    },
+    "resourceTypeObject": {
+        "message": "Objects (object, embed)"
+    },
+    "resourceTypeXhr": {
+        "message": "Fetch and XHR"
+    },
+    "resourceTypePing": {
+        "message": "Ping and Beacon"
+    },
+    "resourceTypeCspReport": {
+        "message": "CSP reports"
+    },
+    "resourceTypeMedia": {
+        "message": "Media (audio, video)"
+    },
+    "resourceTypeWebsocket": {
+        "message": "WebSocket",
+        "description": "Technology name. Not translated."
+    },
+    "resourceTypeWebtransport": {
+        "message": "WebTransport",
+        "description": "Technology name. Not translated."
+    },
+    "resourceTypeWebbundle": {
+        "message": "Web Bundles",
+        "description": "Technology name. Not translated."
+    },
+    "resourceTypeOther": {
+        "message": "Other"
+    },
+    "ruleInitiatorDomains": {
+        "message": "Initiator domains"
+    },
+    "ruleInitiatorDomainsHint": {
+        "message": "Domains of the pages that send the request, comma-separated (including subdomains)."
+    },
+    "ruleInitiatorDomainsPlaceholder": {
+        "message": "app.example.com, admin.example.com",
+        "description": "Sample domains. Not translated."
+    },
+    "ruleTarget": {
+        "message": "Redirect target"
+    },
+    "ruleTargetUrl": {
+        "message": "To a fixed URL"
+    },
+    "ruleTargetSubstitution": {
+        "message": "By regular expression"
+    },
+    "ruleTargetTransform": {
+        "message": "To a modified URL"
+    },
+    "redirectExamplesLabel": {
+        "message": "Redirect examples"
+    },
+    "redirectExamplesTitle": {
+        "message": "Redirect target types"
+    },
+    "redirectExampleUrl": {
+        "message": "All matching requests are redirected to this exact URL. The path and query string of the original URL are not preserved."
+    },
+    "redirectExampleSubstitution": {
+        "message": "The pattern captures the rest of the URL in group \\1, and the substitution inserts it into the new URL (/users?page=2 is preserved as /users?page=2)."
+    },
+    "redirectExampleTransform": {
+        "message": "Only the filled-in URL parts change (in this example, the host). The path and query string are preserved."
+    },
+    "ruleTargetUrlLabel": {
+        "message": "Target URL"
+    },
+    "ruleTargetUrlPlaceholder": {
+        "message": "https://staging.example.com/",
+        "description": "Sample URL. Not translated."
+    },
+    "ruleSubstitution": {
+        "message": "Substitution pattern"
+    },
+    "ruleSubstitutionHint": {
+        "message": "\\1–\\9 — capture groups of the regular expression."
+    },
+    "ruleSubstitutionPlaceholder": {
+        "message": "https://new.example.com/\\1",
+        "description": "Sample substitution. Not translated."
+    },
+    "ruleSubstitutionNeedsRegex": {
+        "message": "Substitution requires capture groups from a regular expression. Set the pattern syntax to Regular expression."
+    },
+    "ruleScheme": {
+        "message": "Scheme"
+    },
+    "ruleSchemeKeep": {
+        "message": "Unchanged"
+    },
+    "ruleSchemeHttp": {
+        "message": "http",
+        "description": "URL scheme. Not translated."
+    },
+    "ruleSchemeHttps": {
+        "message": "https",
+        "description": "URL scheme. Not translated."
+    },
+    "ruleHost": {
+        "message": "Host"
+    },
+    "rulePort": {
+        "message": "Port"
+    },
+    "rulePath": {
+        "message": "Path"
+    },
+    "ruleTransformHint": {
+        "message": "Empty fields keep the corresponding part of the original URL."
+    },
+    "ruleRequestHeaders": {
+        "message": "Request headers"
+    },
+    "ruleResponseHeaders": {
+        "message": "Response headers"
+    },
+    "ruleHeadersEmpty": {
+        "message": "No header modifications."
+    },
+    "ruleHeaderName": {
+        "message": "Header"
+    },
+    "ruleHeaderOperation": {
+        "message": "Operation"
+    },
+    "ruleHeaderValue": {
+        "message": "Value"
+    },
+    "ruleHeaderSet": {
+        "message": "Set"
+    },
+    "ruleHeaderRemove": {
+        "message": "Remove"
+    },
+    "ruleHeaderAppend": {
+        "message": "Append"
+    },
+    "ruleHeaderAdd": {
+        "message": "Add header"
+    },
+    "ruleHeaderDelete": {
+        "message": "Delete row",
+        "description": "Accessible name of the × button in a header row."
+    },
+    "sitesDescription": {
+        "message": "Requestion acts only on allowed sites. The browser checks access to both the request host and the initiator page. Mocks apply only on sites where they are turned on."
+    },
+    "sitesDomain": {
+        "message": "Domain"
+    },
+    "sitesDomainPlaceholder": {
+        "message": "example.com",
+        "description": "Sample domain in an empty input. Not translated."
+    },
+    "sitesSubdomains": {
+        "message": "Include subdomains"
+    },
+    "sitesAllow": {
+        "message": "Allow access"
+    },
+    "sitesEmptyTitle": {
+        "message": "No sites yet"
+    },
+    "sitesEmptyText": {
+        "message": "Enter a domain above. The browser will request access confirmation."
+    },
+    "sitesAllSites": {
+        "message": "All sites"
+    },
+    "sitesWithSubdomains": {
+        "message": "including subdomains",
+        "description": "Badge next to a domain whose subdomains are allowed too."
+    },
+    "sitesRemove": {
+        "message": "Revoke access"
+    },
+    "sitesInvalidDomain": {
+        "message": "Enter a valid domain (for example, example.com or localhost)."
+    },
+    "sitesNotGranted": {
+        "message": "Access was not granted."
+    },
+    "sitesNotAllowed": {
+        "message": "The organization policy blocks access to this site."
+    },
+    "sitesSubdomainsNotAllowed": {
+        "message": "The organization policy allows this site without subdomains. Clear the Include subdomains checkbox."
+    },
+    "sitesAllowedHosts": {
+        "message": "The organization policy allows access only to: $1.",
+        "description": "$1 is a list of hosts, such as example.com, *.example.org."
+    },
+    "sitesNoHostsAllowed": {
+        "message": "The organization policy blocks access to all sites."
+    },
+    "sitesRequestFailed": {
+        "message": "Failed to request access. Try again."
+    },
+    "sitesRemoveFailed": {
+        "message": "Failed to revoke access. Try again."
+    },
+    "sitesMocks": {
+        "message": "Mocks"
+    },
+    "sitesMocksFor": {
+        "message": "Mocks for $1",
+        "description": "$1 is the site."
+    },
+    "sitesMocksFailed": {
+        "message": "Failed to toggle mocks for the site. Try again."
+    },
+    "mocksDescription": {
+        "message": "Replace responses to fetch and XHR requests. If several mocks match a request, the one higher in the list applies. Changes apply to open pages after a reload."
+    },
+    "mocksAdd": {
+        "message": "New mock"
+    },
+    "mocksPaused": {
+        "message": "Interception is paused. Mocks are not applied."
+    },
+    "mocksNoSites": {
+        "message": "Turn on mocks for a site to apply them. Mocks are currently off on all sites."
+    },
+    "mocksOpenSites": {
+        "message": "Turn on for a site"
+    },
+    "mocksPolicyOnly": {
+        "message": "The organization policy allows only organization mocks. User mocks are not applied."
+    },
+    "mocksFeatureOff": {
+        "message": "Mock API is disabled by the organization policy. Mocks are not applied."
+    },
+    "mocksSecretsWarning": {
+        "message": "Mocks are readable by page scripts. Do not store tokens, passwords or other secrets in them."
+    },
+    "mocksEmptyTitle": {
+        "message": "No mocks yet"
+    },
+    "mocksEmptyText": {
+        "message": "Response mocking (status, headers, body) by URL pattern."
+    },
+    "mocksEdit": {
+        "message": "Edit"
+    },
+    "mocksDelete": {
+        "message": "Delete"
+    },
+    "mocksActionFailed": {
+        "message": "Failed to update the mock. Try again."
+    },
+    "mocksNewTitle": {
+        "message": "New mock"
+    },
+    "mocksEditTitle": {
+        "message": "Edit mock"
+    },
+    "mocksCancel": {
+        "message": "Cancel"
+    },
+    "mocksSave": {
+        "message": "Save"
+    },
+    "mocksSaveFailed": {
+        "message": "Failed to save the mock: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "mocksDeleteTitle": {
+        "message": "Delete mock?"
+    },
+    "mocksDeleteText": {
+        "message": "The mock “$1” will be permanently deleted.",
+        "description": "$1 is the mock name."
+    },
+    "mockSummaryMethods": {
+        "message": "Methods: $1",
+        "description": "$1 is a list of HTTP methods."
+    },
+    "mockSummaryDelay": {
+        "message": "Delay: $1 ms",
+        "description": "$1 is a number of milliseconds."
+    },
+    "mockName": {
+        "message": "Name"
+    },
+    "mockNamePlaceholder": {
+        "message": "For example, empty user list"
+    },
+    "mockStepMatch": {
+        "message": "Match conditions"
+    },
+    "mockStepResponse": {
+        "message": "Response"
+    },
+    "mockStatus": {
+        "message": "Status code"
+    },
+    "mockDelay": {
+        "message": "Delay (ms)"
+    },
+    "mockDelayHint": {
+        "message": "Up to 60,000 ms. If empty, the response is returned without delay."
+    },
+    "mockBodyType": {
+        "message": "Body format"
+    },
+    "mockBodyJson": {
+        "message": "JSON"
+    },
+    "mockBodyText": {
+        "message": "Text"
+    },
+    "mockBody": {
+        "message": "Response body"
+    },
+    "mockBodyHint": {
+        "message": "A JSON body must be valid JSON. Responses with null body statuses (for example, 204) have no body."
+    },
+    "mockHeaders": {
+        "message": "Response headers"
+    },
+    "mockHeaderEnabled": {
+        "message": "Send header"
+    },
+    "mockHeaderName": {
+        "message": "Header"
+    },
+    "mockHeaderValue": {
+        "message": "Value"
+    },
+    "mockHeaderAdd": {
+        "message": "Add header"
+    },
+    "mockHeaderDelete": {
+        "message": "Delete header"
+    },
+    "mockHeadersEmpty": {
+        "message": "Without headers, the response includes only a Content-Type matching the body format."
+    },
+    "settingsDescription": {
+        "message": "Requestion interface settings for this browser."
+    },
+    "settingsLanguage": {
+        "message": "Interface language"
+    },
+    "languageAuto": {
+        "message": "Browser language"
+    },
+    "languageEnglish": {
+        "message": "English",
+        "description": "Language name in that language. Not translated."
+    },
+    "languageRussian": {
+        "message": "Русский",
+        "description": "Language name in that language. Not translated."
+    },
+    "settingsTheme": {
+        "message": "Theme"
+    },
+    "themeDark": {
+        "message": "Dark"
+    },
+    "themeLight": {
+        "message": "Light"
+    },
+    "themeSystem": {
+        "message": "System"
+    },
+    "settingsPrivacy": {
+        "message": "Rules and settings are stored locally in this browser. Requestion uses no servers, accounts or telemetry."
+    },
+    "settingsSaveFailed": {
+        "message": "Failed to save the setting. Try again."
+    },
+    "apiClientTitle": {
+        "message": "API client"
+    },
+    "apiClientDisabledTitle": {
+        "message": "API client is disabled by the organization policy"
+    },
+    "apiClientDisabledText": {
+        "message": "Your organization's administrator disabled it through enterprise browser policy. Request history is preserved."
+    },
+    "apiClientTabs": {
+        "message": "Open requests"
+    },
+    "apiClientNewTab": {
+        "message": "New request",
+        "description": "Title of a request tab while its URL is empty."
+    },
+    "apiClientTabOpen": {
+        "message": "Open a new request"
+    },
+    "apiClientTabClose": {
+        "message": "Close $1",
+        "description": "$1 is the title of the tab: a URL or “New request”."
+    },
+    "apiClientMethod": {
+        "message": "Method"
+    },
+    "apiClientUrl": {
+        "message": "URL"
+    },
+    "apiClientSend": {
+        "message": "Send"
+    },
+    "apiClientCancel": {
+        "message": "Cancel"
+    },
+    "apiClientSections": {
+        "message": "Request sections"
+    },
+    "apiClientSectionParams": {
+        "message": "Params"
+    },
+    "apiClientSectionHeaders": {
+        "message": "Headers"
+    },
+    "apiClientSectionBody": {
+        "message": "Body"
+    },
+    "apiClientSectionSettings": {
+        "message": "Settings"
+    },
+    "apiClientValue": {
+        "message": "Value"
+    },
+    "apiClientParamKey": {
+        "message": "Parameter"
+    },
+    "apiClientParamEnabled": {
+        "message": "Send parameter"
+    },
+    "apiClientParamAdd": {
+        "message": "Add parameter"
+    },
+    "apiClientParamDelete": {
+        "message": "Delete parameter"
+    },
+    "apiClientParamsEmpty": {
+        "message": "Parameters are appended to the URL query string, after existing ones."
+    },
+    "apiClientHeaderKey": {
+        "message": "Header"
+    },
+    "apiClientHeaderEnabled": {
+        "message": "Send header"
+    },
+    "apiClientHeaderAdd": {
+        "message": "Add header"
+    },
+    "apiClientHeaderDelete": {
+        "message": "Delete header"
+    },
+    "apiClientHeadersEmpty": {
+        "message": "The browser adds some headers automatically (for example, Accept and User-Agent)."
+    },
+    "apiClientRuleHeaders": {
+        "message": "Headers forbidden for fetch() are set by a temporary declarativeNetRequest rule for this request only: $1. A Cookie header replaces the site's cookies.",
+        "description": "$1 is a comma-separated list of header names."
+    },
+    "apiClientBrowserHeaders": {
+        "message": "These headers are set by the browser, so the values entered here are not sent: $1.",
+        "description": "$1 is a comma-separated list of header names."
+    },
+    "apiClientFieldKey": {
+        "message": "Field"
+    },
+    "apiClientFieldEnabled": {
+        "message": "Send field"
+    },
+    "apiClientFieldAdd": {
+        "message": "Add field"
+    },
+    "apiClientFieldDelete": {
+        "message": "Delete field"
+    },
+    "apiClientFieldsEmpty": {
+        "message": "The form is sent as application/x-www-form-urlencoded."
+    },
+    "apiClientBodyType": {
+        "message": "Body format"
+    },
+    "apiClientBodyNone": {
+        "message": "None"
+    },
+    "apiClientBodyJson": {
+        "message": "JSON"
+    },
+    "apiClientBodyRaw": {
+        "message": "Text"
+    },
+    "apiClientBodyForm": {
+        "message": "Form"
+    },
+    "apiClientBodyNoneHint": {
+        "message": "The request is sent without a body."
+    },
+    "apiClientBodyEditor": {
+        "message": "Request body"
+    },
+    "apiClientContentType": {
+        "message": "Content type"
+    },
+    "apiClientContentTypeHint": {
+        "message": "Sent as the Content-Type header unless set explicitly in the headers."
+    },
+    "apiClientBodyless": {
+        "message": "$1 requests are sent without a body. The body is kept for other methods.",
+        "description": "$1 is GET or HEAD."
+    },
+    "apiClientSendCookies": {
+        "message": "Send site cookies"
+    },
+    "apiClientSendCookiesHint": {
+        "message": "Off: the request is sent without site cookies (credentials: omit). On: the browser adds all site cookies, including the current session cookies (credentials: include)."
+    },
+    "apiClientResponse": {
+        "message": "Response"
+    },
+    "apiClientResponseIdle": {
+        "message": "The response appears here after the request is sent."
+    },
+    "apiClientResponseWaiting": {
+        "message": "Waiting for response…"
+    },
+    "apiClientResponseSections": {
+        "message": "Response sections"
+    },
+    "apiClientResponseBody": {
+        "message": "Body"
+    },
+    "apiClientResponseHeaders": {
+        "message": "Headers"
+    },
+    "apiClientResponseBodyEditor": {
+        "message": "Response body"
+    },
+    "apiClientResponseNoBody": {
+        "message": "The response has no body."
+    },
+    "apiClientResponseBinary": {
+        "message": "Non-text body ($1) is not displayed.",
+        "description": "$1 is the content type, such as image/png."
+    },
+    "apiClientResponseCookiesNote": {
+        "message": "The Set-Cookie header is not shown because the browser hides it from fetch() (forbidden response header)."
+    },
+    "apiClientDuration": {
+        "message": "$1 ms",
+        "description": "$1 is a number of milliseconds."
+    },
+    "apiClientSizeBytes": {
+        "message": "$1 B"
+    },
+    "apiClientSizeKilobytes": {
+        "message": "$1 KB"
+    },
+    "apiClientSizeMegabytes": {
+        "message": "$1 MB"
+    },
+    "apiClientInvalidRequest": {
+        "message": "Request not sent: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "apiClientSendFailed": {
+        "message": "No response received: $1",
+        "description": "$1 is what the browser reported, in English."
+    },
+    "apiClientTimedOut": {
+        "message": "The full response was not received within $1 s (timeout). The request was aborted.",
+        "description": "$1 is a number of seconds."
+    },
+    "apiClientResponseTruncated": {
+        "message": "The response exceeds $1, so only the beginning was downloaded.",
+        "description": "$1 is a size such as 10 MB."
+    },
+    "apiClientSendFailedHint": {
+        "message": "Possible causes: the server is down or unreachable, or the browser does not trust its TLS certificate."
+    },
+    "apiClientNoAccess": {
+        "message": "Requestion has no host permission for $1. Without it, the browser blocks the response (CORS).",
+        "description": "$1 is a host name."
+    },
+    "apiClientHostNotAllowed": {
+        "message": "The organization policy blocks requests to $1.",
+        "description": "$1 is a host name."
+    },
+    "apiClientAllowAccess": {
+        "message": "Allow and send"
+    },
+    "apiClientSidebar": {
+        "message": "History and environments"
+    },
+    "apiClientHistory": {
+        "message": "History"
+    },
+    "apiClientHistoryHint": {
+        "message": "The last $1 sent requests appear here. Requests are stored as entered (with {{variables}}, without their values).",
+        "description": "$1 is the number of requests the history keeps."
+    },
+    "apiClientHistoryNoResponse": {
+        "message": "No response"
+    },
+    "apiClientHistoryDelete": {
+        "message": "Delete from history"
+    },
+    "apiClientHistoryClear": {
+        "message": "Clear history"
+    },
+    "apiClientHistoryClearTitle": {
+        "message": "Clear the history?"
+    },
+    "apiClientHistoryClearText": {
+        "message": "All requests will be deleted from the history. Open tabs are not affected."
+    },
+    "apiClientHistoryCancel": {
+        "message": "Cancel"
+    },
+    "apiClientHistoryActionFailed": {
+        "message": "Failed to update the history. Try again."
+    },
+    "apiClientMissingVariables": {
+        "message": "No values for variables: $1. Select an environment that defines them, or add them to the current one.",
+        "description": "$1 is a comma-separated list of variable names."
+    },
+    "apiClientEnvironment": {
+        "message": "Environment"
+    },
+    "apiClientNoEnvironment": {
+        "message": "No environment"
+    },
+    "apiClientEnvironments": {
+        "message": "Environments"
+    },
+    "apiClientEnvironmentsEmpty": {
+        "message": "An environment stores variable values (for example, {{baseUrl}} or {{token}}) for a single stage. Select the active environment in the page header."
+    },
+    "apiClientEnvironmentAdd": {
+        "message": "New environment"
+    },
+    "apiClientEnvironmentActive": {
+        "message": "Active"
+    },
+    "apiClientEnvironmentVariableCount": {
+        "message": "Variables: $1",
+        "description": "$1 is a number."
+    },
+    "apiClientEnvironmentEdit": {
+        "message": "Edit environment"
+    },
+    "apiClientEnvironmentEditNamed": {
+        "message": "Edit $1",
+        "description": "$1 is the name of an environment."
+    },
+    "apiClientEnvironmentDelete": {
+        "message": "Delete environment"
+    },
+    "apiClientEnvironmentDeleteNamed": {
+        "message": "Delete $1",
+        "description": "$1 is the name of an environment."
+    },
+    "apiClientEnvironmentsActionFailed": {
+        "message": "Failed to update the environments. Try again."
+    },
+    "apiClientEnvironmentNewTitle": {
+        "message": "New environment"
+    },
+    "apiClientEnvironmentEditTitle": {
+        "message": "Edit environment"
+    },
+    "apiClientEnvironmentName": {
+        "message": "Name"
+    },
+    "apiClientEnvironmentNamePlaceholder": {
+        "message": "Staging"
+    },
+    "apiClientEnvironmentCancel": {
+        "message": "Cancel"
+    },
+    "apiClientEnvironmentSave": {
+        "message": "Save"
+    },
+    "apiClientEnvironmentSaveFailed": {
+        "message": "Failed to save the environment: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "apiClientEnvironmentDeleteTitle": {
+        "message": "Delete environment?"
+    },
+    "apiClientEnvironmentDeleteText": {
+        "message": "The environment “$1” and its variables will be permanently deleted."
+    },
+    "apiClientVariables": {
+        "message": "Variables"
+    },
+    "apiClientVariableKey": {
+        "message": "Variable"
+    },
+    "apiClientVariableEnabled": {
+        "message": "Use variable"
+    },
+    "apiClientVariableSecret": {
+        "message": "Secret"
+    },
+    "apiClientVariableEncrypted": {
+        "message": "Encrypted (enter a new value to replace)"
+    },
+    "apiClientVariableAdd": {
+        "message": "Add variable"
+    },
+    "apiClientVariableDelete": {
+        "message": "Delete variable"
+    },
+    "apiClientVariablesHint": {
+        "message": "Variable syntax: {{name}}. Supported in the URL, params, headers and body."
+    },
+    "apiClientSecretsWarning": {
+        "message": "Secret values are masked in the UI but stored unencrypted in the browser profile. To encrypt them with a master password, use the button in the page header."
+    },
+    "apiClientVaultRequiredWarning": {
+        "message": "The organization policy requires secret encryption. Values of variables marked Secret are not saved until encryption is turned on."
+    },
+    "apiClientSecretsEncrypted": {
+        "message": "Secret values are encrypted with the master password and are not shown in the editor. Enter a new value to replace one."
+    },
+    "apiClientSecretsLocked": {
+        "message": "The vault is locked, so these encrypted variables have no value: $1. Unlock the vault in the page header.",
+        "description": "$1 is a comma-separated list of variable names."
+    },
+    "apiClientVaultRequired": {
+        "message": "The organization policy requires secret encryption. Turn on encryption to use $1.",
+        "description": "$1 is a list of variable names."
+    },
+    "apiClientVaultSetupOpen": {
+        "message": "Encrypt secrets"
+    },
+    "apiClientVaultUnlockOpen": {
+        "message": "Unlock secrets"
+    },
+    "apiClientVaultLock": {
+        "message": "Lock secrets"
+    },
+    "apiClientVaultDisableOpen": {
+        "message": "Turn off encryption"
+    },
+    "apiClientVaultSettingsOpen": {
+        "message": "Vault settings"
+    },
+    "apiClientVaultSettingsTitle": {
+        "message": "Change master password"
+    },
+    "apiClientVaultChangeText": {
+        "message": "Secret values will be re-encrypted with a key derived from the new password."
+    },
+    "apiClientVaultCurrentPassword": {
+        "message": "Current password"
+    },
+    "apiClientVaultNewPassword": {
+        "message": "New password"
+    },
+    "apiClientVaultChangeSubmit": {
+        "message": "Change password"
+    },
+    "apiClientVaultFailed": {
+        "message": "The vault is not responding. Try again."
+    },
+    "apiClientVaultCancel": {
+        "message": "Cancel"
+    },
+    "apiClientVaultSetupTitle": {
+        "message": "Encrypt secrets"
+    },
+    "apiClientVaultSetupText": {
+        "message": "Secret values in all environments will be encrypted with a key derived from the master password (PBKDF2). The password itself is not stored."
+    },
+    "apiClientVaultPassword": {
+        "message": "Master password"
+    },
+    "apiClientVaultPasswordHint": {
+        "message": "At least $1 characters",
+        "description": "$1 is a number."
+    },
+    "apiClientVaultPasswordRepeat": {
+        "message": "Confirm password"
+    },
+    "apiClientVaultSetupWarning": {
+        "message": "Password recovery is not possible. If the password is lost, encrypted values can only be deleted (vault reset) and entered again."
+    },
+    "apiClientVaultAutoLockHint": {
+        "message": "The vault locks automatically after $1 min of inactivity and when the browser closes.",
+        "description": "$1 is a number of minutes."
+    },
+    "apiClientVaultPasswordMismatch": {
+        "message": "Passwords do not match."
+    },
+    "apiClientVaultSetupSubmit": {
+        "message": "Encrypt"
+    },
+    "apiClientVaultUnlockTitle": {
+        "message": "Unlock secrets"
+    },
+    "apiClientVaultUnlockText": {
+        "message": "Enter the master password to use encrypted values in requests."
+    },
+    "apiClientVaultUnlockSubmit": {
+        "message": "Unlock"
+    },
+    "apiClientVaultWrongPassword": {
+        "message": "Incorrect password."
+    },
+    "apiClientVaultForgot": {
+        "message": "Forgot the password?"
+    },
+    "apiClientVaultDisableTitle": {
+        "message": "Turn off encryption?"
+    },
+    "apiClientVaultDisableText": {
+        "message": "Secret values will be decrypted and stored unencrypted in the browser profile. Enter the master password to confirm."
+    },
+    "apiClientVaultDisableSubmit": {
+        "message": "Turn off encryption"
+    },
+    "apiClientVaultResetTitle": {
+        "message": "Reset vault?"
+    },
+    "apiClientVaultResetText": {
+        "message": "Encrypted values will be deleted and encryption turned off. Variables are kept with empty values that must be entered again."
+    },
+    "apiClientVaultResetSubmit": {
+        "message": "Delete encrypted values"
+    },
+    "apiClientVaultLockedSave": {
+        "message": "The vault is locked. Unlock it in the page header to save secret values."
+    },
+    "apiClientVaultRequiredSave": {
+        "message": "The organization policy requires secret encryption. Turn on encryption and save again."
+    },
+    "apiClientCurlImportOpen": {
+        "message": "Import cURL"
+    },
+    "apiClientCurlImportTitle": {
+        "message": "Import cURL command"
+    },
+    "apiClientCurlCommand": {
+        "message": "cURL command"
+    },
+    "apiClientCurlCommandHint": {
+        "message": "For example, from DevTools → Copy as cURL (bash). The request opens in a new tab. cmd and PowerShell syntax is not supported."
+    },
+    "apiClientCurlCommandPlaceholder": {
+        "message": "curl 'https://api.example.com/users' -H 'Accept: application/json'",
+        "description": "An example command; keep it as is."
+    },
+    "apiClientCurlImportFailed": {
+        "message": "Failed to import the command: $1",
+        "description": "$1 is the technical reason, in English."
+    },
+    "apiClientCurlImportSubmit": {
+        "message": "Import"
+    },
+    "apiClientCurlExportOpen": {
+        "message": "Copy as cURL"
+    },
+    "apiClientCurlExportTitle": {
+        "message": "Copy as cURL"
+    },
+    "apiClientCurlExportCommand": {
+        "message": "Command (bash)"
+    },
+    "apiClientCurlExportSecrets": {
+        "message": "Include secret values"
+    },
+    "apiClientCurlExportSecretsHint": {
+        "message": "When unchecked, secrets stay as {{name}} and do not end up in the clipboard."
+    },
+    "apiClientCurlExportMissing": {
+        "message": "Variables without values are left as is: $1.",
+        "description": "$1 is a comma-separated list of variable names."
+    },
+    "apiClientCurlExportCookies": {
+        "message": "Browser cookies are not included in the command. If the server requires them, add a Cookie header."
+    },
+    "apiClientCurlExportCopy": {
+        "message": "Copy"
+    },
+    "apiClientCurlExportCopied": {
+        "message": "Copied to the clipboard."
+    },
+    "apiClientCurlExportCopyFailed": {
+        "message": "Failed to copy. Select the command and copy it manually."
+    },
+    "apiClientCollections": {
+        "message": "Collections"
+    },
+    "apiClientCollectionsEmpty": {
+        "message": "Request storage in collections and folders. Ctrl+S saves the current tab's request."
+    },
+    "apiClientCollectionAdd": {
+        "message": "New collection"
+    },
+    "apiClientCollectionsLimit": {
+        "message": "Maximum number of collections: $1.",
+        "description": "$1 is a number."
+    },
+    "apiClientCollectionsFailed": {
+        "message": "Failed to update the collection."
+    },
+    "apiClientCollectionMenu": {
+        "message": "Actions for $1",
+        "description": "$1 is the name of a collection, a folder or a request."
+    },
+    "apiClientCollectionNewRequest": {
+        "message": "New request"
+    },
+    "apiClientCollectionNewFolder": {
+        "message": "New folder"
+    },
+    "apiClientCollectionRename": {
+        "message": "Rename"
+    },
+    "apiClientCollectionDelete": {
+        "message": "Delete"
+    },
+    "apiClientCollectionCreateTitle": {
+        "message": "New collection"
+    },
+    "apiClientCollectionFolderTitle": {
+        "message": "New folder"
+    },
+    "apiClientCollectionRequestTitle": {
+        "message": "New request"
+    },
+    "apiClientCollectionRenameTitle": {
+        "message": "Rename"
+    },
+    "apiClientCollectionName": {
+        "message": "Name"
+    },
+    "apiClientCollectionCreate": {
+        "message": "Create"
+    },
+    "apiClientCollectionSave": {
+        "message": "Save"
+    },
+    "apiClientCollectionCancel": {
+        "message": "Cancel"
+    },
+    "apiClientCollectionDeleteTitle": {
+        "message": "Delete from the collections?"
+    },
+    "apiClientCollectionDeleteText": {
+        "message": "“$1” will be deleted (with all contents, if it is a folder or a collection). Requests in open tabs are kept.",
+        "description": "$1 is the name of a collection, a folder or a request."
+    },
+    "apiClientSave": {
+        "message": "Save to a collection"
+    },
+    "apiClientSaveHint": {
+        "message": "Save to a collection (Ctrl+S)"
+    },
+    "apiClientSaveShort": {
+        "message": "Save"
+    },
+    "apiClientCurlShort": {
+        "message": "cURL"
+    },
+    "apiClientRequestUnsaved": {
+        "message": "Not saved to a collection"
+    },
+    "apiClientSaveTitle": {
+        "message": "Save to a collection"
+    },
+    "apiClientSaveName": {
+        "message": "Request name"
+    },
+    "apiClientSaveCollection": {
+        "message": "Collection"
+    },
+    "apiClientSaveCollectionName": {
+        "message": "New collection name"
+    },
+    "apiClientSaveFolder": {
+        "message": "Folder"
+    },
+    "apiClientSaveTop": {
+        "message": "Collection root"
+    },
+    "apiClientSaveFailed": {
+        "message": "Failed to save the request."
+    },
+    "apiClientTabUnsaved": {
+        "message": "Unsaved changes"
+    },
+    "apiClientImportOpen": {
+        "message": "Import"
+    },
+    "apiClientImportTitle": {
+        "message": "Import a collection"
+    },
+    "apiClientImportHint": {
+        "message": "Supported formats (JSON, up to 10 MB): Postman collection (v2.0, v2.1), Postman environment, OpenAPI 3.0 or 3.1 specification."
+    },
+    "apiClientImportFile": {
+        "message": "File"
+    },
+    "apiClientImportFileHint": {
+        "message": "JSON, up to 10 MB"
+    },
+    "apiClientImportText": {
+        "message": "Paste the file's text contents"
+    },
+    "apiClientImportFileUnreadable": {
+        "message": "Failed to read the file."
+    },
+    "apiClientImportInvalid": {
+        "message": "The file cannot be imported:"
+    },
+    "apiClientImportPreview": {
+        "message": "Import preview"
+    },
+    "apiClientImportCollection": {
+        "message": "New collection “$1” (requests: $2, folders: $3).",
+        "description": "$1 is a name, $2 and $3 are numbers."
+    },
+    "apiClientImportEnvironment": {
+        "message": "New environment “$1” (variables: $2). Select it in the page header to use its variables.",
+        "description": "$1 is a name, $2 is a number."
+    },
+    "apiClientImportSecretsPlain": {
+        "message": "Secret values will be stored unencrypted. To encrypt them, turn on encryption in the page header before importing."
+    },
+    "apiClientImportSecretsEncrypted": {
+        "message": "Secret values will be encrypted with the master password."
+    },
+    "apiClientImportSecretsLocked": {
+        "message": "The vault is locked, so secret values will not be imported. Unlock the vault in the page header and import again."
+    },
+    "apiClientImportSecretsRequired": {
+        "message": "The organization policy requires secret encryption, so secret values will not be imported. Turn on encryption and import again."
+    },
+    "apiClientImportEnvironmentsLimit": {
+        "message": "Maximum number of environments: $1.",
+        "description": "$1 is a number."
+    },
+    "apiClientImportGaps": {
+        "message": "Not imported:"
+    },
+    "apiClientImportGapScripts": {
+        "message": "Scripts and tests (scripts: $2): code from the file is never executed",
+        "description": "$2 is a number."
+    },
+    "apiClientImportGapExamples": {
+        "message": "Saved example responses (examples: $2)",
+        "description": "$2 is a number."
+    },
+    "apiClientImportGapBodies": {
+        "message": "Body modes $1 (requests: $2): only JSON, text and x-www-form-urlencoded forms are supported",
+        "description": "$1 is a list of body modes, $2 is a number."
+    },
+    "apiClientImportGapBodiesOfBodyless": {
+        "message": "Bodies of $1 requests (requests: $2): requests with these methods are sent without a body",
+        "description": "$1 is a list of methods, $2 is a number."
+    },
+    "apiClientImportGapAuths": {
+        "message": "Authorization types $1 (requests: $2)",
+        "description": "$1 is a list of authorization types, $2 is a number."
+    },
+    "apiClientImportGapBasicWithVariables": {
+        "message": "Basic authorization with {{variables}} (requests: $2): credentials are Base64-encoded, so variables cannot be substituted",
+        "description": "$2 is a number."
+    },
+    "apiClientImportGapMethods": {
+        "message": "Requests with methods $1 (requests: $2): these methods are not supported",
+        "description": "$1 is a list of methods, $2 is a number."
+    },
+    "apiClientImportGapDynamicVariables": {
+        "message": "Dynamic variables $1 (requests: $2): not supported, left as is",
+        "description": "$1 is a list of templates, $2 is a number."
+    },
+    "apiClientImportGapDeepFolders": {
+        "message": "Folders nested deeper than five levels (folders: $2): their requests are moved to the fifth-level folder",
+        "description": "$2 is a number."
+    },
+    "apiClientImportGapVariableNames": {
+        "message": "Variables with names not allowed in the {{name}} syntax: $1",
+        "description": "$1 is a list of names."
+    },
+    "apiClientImportEmptySecrets": {
+        "message": "Before sending requests, set these secret values in the environment: $1.",
+        "description": "$1 is a list of names."
+    },
+    "apiClientImportGapRelativeServer": {
+        "message": "Relative server URL $1: set the full API URL in the environment's baseUrl variable",
+        "description": "$1 is an address."
+    },
+    "apiClientImportGapExternalRefs": {
+        "message": "External references $1 (references: $2): only references within the file are supported",
+        "description": "$1 is a list of references, $2 is a number."
+    },
+    "apiClientImportGapCookieParameters": {
+        "message": "Cookie parameters $1 (parameters: $2)",
+        "description": "$1 is a list of names, $2 is a number."
+    },
+    "apiClientImportGapOwnServers": {
+        "message": "Operations with their own servers field (requests: $2): sent to baseUrl like the rest",
+        "description": "$2 is a number."
+    },
+    "apiClientImportSubmit": {
+        "message": "Import"
+    },
+    "apiClientImportCancel": {
+        "message": "Cancel"
+    },
+    "apiClientImportFailed": {
+        "message": "Failed to import the file: $1",
+        "description": "$1 is the reason."
+    },
+    "apiClientImportUnnamed": {
+        "message": "Untitled"
+    },
+    "apiClientImportVariablesSuffix": {
+        "message": ": variables",
+        "description": "Ends the name of the environment made of the variables of a collection."
+    },
+    "apiClientCurlCancel": {
+        "message": "Cancel"
+    },
+    "dialogClose": {
+        "message": "Close",
+        "description": "Accessible name of the button that closes a dialog."
+    },
+    "codeEditorFormat": {
+        "message": "Format",
+        "description": "Button under a JSON editor that lays the JSON out with indents."
+    },
+    "fileDropzonePrompt": {
+        "message": "Drop a file here or click to select"
+    },
+    "fileDropzoneReplace": {
+        "message": "Drop or select another file to replace it"
+    },
+    "checklistAnyNumber": {
+        "message": "multiple selection"
+    }
+}

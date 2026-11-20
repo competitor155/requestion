@@ -1,0 +1,107 @@
+/** Neutral black, gray and white palette after the dark theme of Spectrum 2; dark is the default */
+:root {
+    color-scheme: dark;
+
+    --color-bg: light-dark(#f5f5f5, #111111);
+    --color-surface: light-dark(#ffffff, #1b1b1b);
+    --color-surface-raised: light-dark(#ffffff, #222222);
+    --color-surface-hover: light-dark(#f0f0f0, #2a2a2a);
+    --color-surface-pressed: light-dark(#e6e6e6, #323232);
+    --color-field: light-dark(#ffffff, #141414);
+
+    --color-border: light-dark(#e3e3e3, #2c2c2c);
+    --color-border-strong: light-dark(#c6c6c6, #444444);
+    --color-border-hover: light-dark(#8f8f8f, #6d6d6d);
+
+    --color-text: light-dark(#131313, #f2f2f2);
+    --color-text-muted: light-dark(#505050, #afafaf);
+    --color-text-subtle: light-dark(#8a8a8a, #7a7a7a);
+
+    --color-primary: light-dark(#1f1f1f, #f2f2f2);
+    --color-primary-hover: light-dark(#000000, #ffffff);
+    --color-on-primary: light-dark(#ffffff, #111111);
+    --color-focus: light-dark(#1f6feb, #4c8dff);
+
+    --color-accent: light-dark(#1f6feb, #3b82f6);
+    --color-accent-hover: light-dark(#1858c4, #5b98ff);
+    --color-on-accent: #ffffff;
+    --color-accent-text: light-dark(#1858c4, #84b3ff);
+    --color-accent-surface: light-dark(#eaf1fe, #13213a);
+    --color-accent-border: light-dark(#a9c5f8, #29467a);
+
+    --color-success-text: light-dark(#1a7f37, #57c878);
+    --color-caution-text: light-dark(#b4500f, #f29a52);
+
+    --color-method-get: light-dark(#18794e, #5fd38d);
+    --color-method-post: light-dark(#9a6700, #f0c24b);
+    --color-method-put: light-dark(#1858c4, #74a7ff);
+    --color-method-patch: light-dark(#7a3fd0, #c4a3ff);
+    --color-method-delete: light-dark(#c9252d, #ff7b70);
+    --color-method-other: light-dark(#52667a, #9fb2c6);
+
+    --color-variable-text: light-dark(#b4500f, #f5a54a);
+    --color-variable-surface: light-dark(#fdf0e3, #2e2112);
+
+    --color-code-key: light-dark(#0451a5, #9cdcfe);
+    --color-code-string: light-dark(#a31515, #ce9178);
+    --color-code-number: light-dark(#098658, #b5cea8);
+    --color-code-keyword: light-dark(#0000ff, #569cd6);
+
+    --color-switch-track: light-dark(#c6c6c6, #4a4a4a);
+    --color-switch-thumb: light-dark(#ffffff, #dbdbdb);
+    --color-segment-track: light-dark(#ebebeb, #222222);
+    --color-segment-selected: light-dark(#ffffff, #3d3d3d);
+
+    --color-danger: light-dark(#c9252d, #e5534b);
+    --color-danger-hover: light-dark(#a51d24, #f0675f);
+    --color-on-danger: #ffffff;
+    --color-danger-text: light-dark(#c9252d, #ff7b70);
+
+    --color-warning-text: light-dark(#7a4f00, #f0b849);
+    --color-warning-surface: light-dark(#fff8e6, #241e10);
+    --color-warning-border: light-dark(#f0d48f, #4a3b14);
+
+    --color-backdrop: light-dark(rgb(0 0 0 / 35%), rgb(0 0 0 / 70%));
+    --color-selection: light-dark(#d9d9d9, #444444);
+    --color-selection-translucent: light-dark(rgb(31 111 235 / 25%), rgb(76 141 255 / 35%));
+
+    --shadow-raised: 0 16px 48px light-dark(rgb(0 0 0 / 14%), rgb(0 0 0 / 60%));
+    --shadow-segment: 0 1px 3px light-dark(rgb(0 0 0 / 18%), rgb(0 0 0 / 45%));
+
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 12px;
+    --space-l: 16px;
+    --space-xl: 24px;
+    --space-xxl: 32px;
+    --space-xxxl: 48px;
+
+    --radius-s: 6px;
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --radius-xl: 16px;
+    --radius-pill: 999px;
+
+    --control-height-s: 32px;
+    --control-height-m: 40px;
+
+    --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 18px;
+    --font-size-xl: 22px;
+    --font-size-xxl: 28px;
+    --line-height: 1.5;
+    --line-height-tight: 1.25;
+    --letter-spacing-caps: 0.06em;
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+}
+
+:root[data-theme='system'] {
+    color-scheme: light dark;
+}

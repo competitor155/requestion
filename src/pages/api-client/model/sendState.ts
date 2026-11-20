@@ -1,0 +1,144 @@
+import type { ApiResponse } from '#entities/request';
+
+/** Where the request of a tab stands */
+export enum SendStateTypes {
+    /** Not sent yet, or cancelled */
+    IDLE = 'idle',
+    /** Waiting for the response */
+    SENDING = 'sending',
+    /** The response arrived */
+    RECEIVED = 'received',
+    /** The request cannot go as typed */
+    INVALID = 'invalid',
+    /** The request uses variables that have no value */
+    MISSING_VARIABLES = 'missingVariables',
+    /** The request uses encrypted variables while the vault is locked */
+    SECRETS_LOCKED = 'secretsLocked',
+    /** The request uses secrets stored as typed, and the policy requires the vault */
+    VAULT_REQUIRED = 'vaultRequired',
+    /** The request went, but no response came back */
+    FAILED = 'failed',
+    /** The whole response did not come back in time */
+    TIMED_OUT = 'timedOut',
+    /** The user refused access to the host */
+    NO_ACCESS = 'noAccess',
+    /** The administrator's policy does not allow the host */
+    NOT_ALLOWED = 'notAllowed',
+}
+
+export type SendStateType = `${SendStateTypes}`;
+
+interface IdleState {
+    /** Not sent yet */
+    readonly stateType: SendStateTypes.IDLE;
+}
+
+interface SendingState {
+    /** Waiting for the response */
+    readonly stateType: SendStateTypes.SENDING;
+    /** The response of the last sending, shown until the new one comes */
+    readonly previous?: ApiResponse;
+}
+
+interface ReceivedState {
+    /** The response arrived */
+    readonly stateType: SendStateTypes.RECEIVED;
+    /** What came back */
+    readonly response: ApiResponse;
+}
+
+interface InvalidState {
+    /** The request cannot go as typed */
+    readonly stateType: SendStateTypes.INVALID;
+    /** Technical reason, in English */
+    readonly reason: string;
+}
+
+interface MissingVariablesState {
+    /** The request uses variables that have no value */
+    readonly stateType: SendStateTypes.MISSING_VARIABLES;
+    /** Names of those variables */
+    readonly names: readonly string[];
+}
+
+interface SecretsLockedState {
+    /** The request uses encrypted variables while the vault is locked */
+    readonly stateType: SendStateTypes.SECRETS_LOCKED;
+    /** Names of those variables */
+    readonly names: readonly string[];
+}
+
+interface VaultRequiredState {
+    /** The request uses secrets stored as typed, and the policy requires the vault */
+    readonly stateType: SendStateTypes.VAULT_REQUIRED;
+    /** Names of those variables */
+    readonly names: readonly string[];
+}
+
+interface TimedOutState {
+    /** The whole response did not come back in time */
+    readonly stateType: SendStateTypes.TIMED_OUT;
+}
+
+interface FailedState {
+    /** No response came back */
+    readonly stateType: SendStateTypes.FAILED;
+    /** What the browser reported */
+    readonly reason: string;
+}
+
+interface NoAccessState {
+    /** The user refused access to the host */
+    readonly stateType: SendStateTypes.NO_ACCESS;
+    /** Host the request goes to */
+    readonly host: string;
+}
+
+interface NotAllowedState {
+    /** The administrator's policy does not allow the host */
+    readonly stateType: SendStateTypes.NOT_ALLOWED;
+    /** Host the request goes to */
+    readonly host: string;
+}
+
+export type SendState =
+    | IdleState
+    | SendingState
+    | ReceivedState
+    | InvalidState
+    | MissingVariablesState
+    | SecretsLockedState
+    | VaultRequiredState
+    | TimedOutState
+    | FailedState
+    | NoAccessState
+    | NotAllowedState;
+
+export const IDLE_STATE: SendState = { stateType: SendStateTypes.IDLE };
+
+export const SENDING_STATE: SendState = { stateType: SendStateTypes.SENDING };
+
+export const TIMED_OUT_STATE: SendState = { stateType: SendStateTypes.TIMED_OUT };
+
+/** The last response stays on the screen while the request goes again and comes back when it is cancelled */
+export const getNextSendState = (current: SendState, next: SendState): SendState => {
+    const isResent = current.stateType === SendStateTypes.RECEIVED && next.stateType === SendStateTypes.SENDING;
+
+    if (isResent) {
+        return {
+            stateType: SendStateTypes.SENDING,
+            previous: current.response,
+        };
+    }
+
+    const isCancelled = current.stateType === SendStateTypes.SENDING && next.stateType === SendStateTypes.IDLE;
+
+    if (isCancelled && current.previous) {
+        return {
+            stateType: SendStateTypes.RECEIVED,
+            response: current.previous,
+        };
+    }
+
+    return next;
+};
